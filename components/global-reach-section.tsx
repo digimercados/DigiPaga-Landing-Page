@@ -11,7 +11,6 @@ const appIcons = [
   { name: "WhatsApp", src: "/wa.png" },
   { name: "Gmail", src: "/gmail.png" },
   { name: "Chat", src: "/msg.png" },
-]a
 
 export default function GlobalReachSection() {
   const containerVariants = {
