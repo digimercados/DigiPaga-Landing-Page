@@ -111,7 +111,7 @@ export default function Footer() {
               <SocialIcon key={social.name} icon={social.icon} name={social.name} color={social.color} index={index} />
             ))}
             {/* Three small dots for more icons */}
-            <div className="flex space-x-1" aria-hidden="true">
+            {/* <div className="flex space-x-1" aria-hidden="true">
               {[0, 1, 2].map(dotIndex => (
                 <motion.div
                   key={dotIndex}
@@ -122,7 +122,7 @@ export default function Footer() {
                   transition={{ duration: 0.3, delay: socialIcons.length * 0.1 + dotIndex * 0.1 }}
                 />
               ))}
-            </div>
+            </div> */}
           </div>
           {/* Policy links directly under social icons */}
           <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform mt-2" role="listitem"> {/* Added mt-2 for spacing */}
