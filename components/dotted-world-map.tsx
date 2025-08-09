@@ -54,16 +54,7 @@ export default function DottedWorldMap() {
         style={{ objectFit: 'contain' }}
         className="opacity-80"
       />
-      <svg
-        width="100%"
-        height="100%"
-        viewBox="0 0 1000 500"
-        className="absolute top-0 left-0 z-10"
-        aria-hidden="true" // Decorative SVG
-      >
-        {/* Render the interactive dots */}
-        {/* {dots} */}
-      </svg>
+     
     </div>
   )
 }
