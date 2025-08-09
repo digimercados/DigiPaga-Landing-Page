@@ -7,11 +7,11 @@ import Image from "next/image"
 import AnimatedImage from "./common/AnimatedArrow"
 
 const appIcons = [
-  { name: "Telegram", src: "/sl22.png" },
+  { name: "Telegram", src: "/tel.png" },
   { name: "WhatsApp", src: "/wa.png" },
-  { name: "Gmail", src: "/26.png" },
+  { name: "Gmail", src: "/gmail.png" },
   { name: "Chat", src: "/msg.png" },
-]
+]a
 
 export default function GlobalReachSection() {
   const containerVariants = {
