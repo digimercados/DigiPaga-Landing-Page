@@ -59,7 +59,7 @@ export default function GlobalReachSection() {
       {/* Heading */}
       <motion.h2 id="global-reach-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight mt-16 md:mt-24 z-10 will-change-transform" variants={itemVariants}>
         Access cash in <span className="text-lime-500">350,000 locations</span> in 180 countries
-         <AnimatedImage src="/arrowl.svg" className="top-16   left-14" />
+         <AnimatedImage  className="top-16   left-14" />
       </motion.h2>
       
 
@@ -81,8 +81,8 @@ export default function GlobalReachSection() {
         {appIcons.map((app, index) => (
           <AppIconCard key={app.name} name={app.name} src={app.src} index={index} />
         ))}
-                <AnimatedImage src="/arrowl.svg" className="top-20  left-8" />
-         <AnimatedImage src="/arrowl.svg" className="top-20  scale-x-[-1]   right-8" />
+                <AnimatedImage className="top-20  left-8" />
+         <AnimatedImage className="top-20  scale-x-[-1]   right-8" />
 
        
       </div>

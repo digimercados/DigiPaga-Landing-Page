@@ -32,7 +32,7 @@ export default function AnimatedImage({ src, className = "" }:any) {
   return (
     <div ref={wrapperRef} className={`absolute pointer-events-none ${className}`}>
       <Image
-        src={src}
+        src="/ar.svg"
         alt=""
         width={80}
         height={80}
