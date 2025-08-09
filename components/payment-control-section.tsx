@@ -4,6 +4,9 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { CheckCircle2 } from 'lucide-react'
+import RotatingSVG from "./common/Animatedflower"
+import AnimatedImage from "./common/AnimatedArrow"
+import AnimatedRotatingImage from "./common/Animatedflower"
 
 export default function PaymentControlSection() {
   const containerVariants = {
@@ -37,77 +40,21 @@ export default function PaymentControlSection() {
     >
       {/* Top Heading */}
       <motion.h2 id="payment-control-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight z-10 will-change-transform" variants={itemVariants}>
-       Grow Your Sales With <span className="text-lime-500">DigiPaga Payment </span> Gateway
+        Control your  <span className="text-lime-500">Payments  </span>   in multiple currencies
+       <AnimatedImage src="/arrowl.svg" className="top-20  left-[30%]" />
+                <AnimatedImage src="/arrowl.svg" className="top-20  scale-x-[-1]   right-[30%]" />
       </motion.h2>
       <div className="flex space-x-8 mt-2 mb-16 z-10">
-        <motion.svg
-          width="30"
-          height="30"
-          viewBox="0 0 30 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-lime-500"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-          aria-hidden="true"
-        >
-          <path
-            d="M15 25 V 5 M10 10 L15 5 L20 10"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </motion.svg>
-        <motion.svg
-          width="30"
-          height="30"
-          viewBox="0 0 30 30"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="text-lime-500"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
-          aria-hidden="true"
-        >
-          <path
-            d="M15 25 V 5 M10 10 L15 5 L20 10"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </motion.svg>
+       
+
+      
       </div>
 
-      {/* Blue Star (left) */}
-      <motion.svg
-        className="absolute top-16 left-8 md:left-16 w-16 h-16 md:w-24 md:h-24 text-indigo-500 opacity-70 z-0 will-change-transform"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        variants={starVariants}
-        initial="initial"
-        animate="animate"
-        aria-hidden="true"
-      >
-        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" transform="rotate(45 12 12)" />
-      </motion.svg>
+      {/* green Star (left) */}
+     
+      
 
-      {/* Purple Circle (right) */}
-      <motion.div
-        className="absolute top-24 right-8 md:right-16 w-8 h-8 rounded-full bg-purple-500 opacity-70 z-0 will-change-transform"
-        initial={{ opacity: 0, scale: 0 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 1, ease: "easeOut" }}
-        aria-hidden="true"
-      />
+     
 
       {/* Main Content Grid */}
       <div className="container mx-auto grid lg:grid-cols-2 gap-6 items-center mt-12">
@@ -119,6 +66,10 @@ export default function PaymentControlSection() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
+           <AnimatedRotatingImage
+        src="/flower.svg"
+        className="-top-6 left-0 md:left-0 w-16 h-16 md:w-24 md:h-24"
+      />
           <div className="relative z-10  p-4 ">
             <Image
               src="/img3.png"
@@ -134,7 +85,7 @@ export default function PaymentControlSection() {
         </motion.div>
 
         {/* Right Content Column */}
-        <div className="flex flex-col space-y-6 text-center lg:text-left">
+        <div className="flex flex-col bg-[#F8F9F4] px-6 py-2 rounded-lg md:px-8 md:py-12 space-y-6 text-center lg:text-left">
           <motion.div
             className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}

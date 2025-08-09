@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import DottedWorldMap from "./dotted-world-map"
 import AppIconCard from "./app-icon-card"
 import Image from "next/image"
+import AnimatedImage from "./common/AnimatedArrow"
 
 const appIcons = [
   { name: "Telegram", src: "/sl22.png" },
@@ -54,26 +55,11 @@ export default function GlobalReachSection() {
                   />
       </div>
 
-      {/* Blue Star */}
-      {/* <motion.svg
-        className="absolute top-16 right-8 md:right-16 w-16 h-16 md:w-24 md:h-24 text-indigo-500 opacity-70 will-change-transform"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        variants={starVariants}
-        initial="initial"
-        animate="animate"
-      >
-        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" transform="rotate(45 12 12)" />
-      </motion.svg> */}
-
+     
       {/* Heading */}
       <motion.h2 id="global-reach-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight mt-16 md:mt-24 z-10 will-change-transform" variants={itemVariants}>
         Access cash in <span className="text-lime-500">350,000 locations</span> in 180 countries
+         <AnimatedImage src="/arrowl.svg" className="top-16   left-14" />
       </motion.h2>
       
 
@@ -95,31 +81,10 @@ export default function GlobalReachSection() {
         {appIcons.map((app, index) => (
           <AppIconCard key={app.name} name={app.name} src={app.src} index={index} />
         ))}
-        {/* Green curved lines */}
-        <motion.svg
-          className="absolute -bottom-12 left-0 w-24 h-24 text-lime-400 opacity-70 z-0 will-change-transform"
-          viewBox="0 0 100 100"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
-        >
-          <path d="M 10 90 C 30 70, 70 70, 90 90" />
-        </motion.svg>
-        <motion.svg
-          className="absolute -bottom-12 right-0 w-24 h-24 text-lime-400 opacity-70 z-0 will-change-transform"
-          viewBox="0 0 100 100"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          initial={{ pathLength: 0, opacity: 0 }}
-          animate={{ pathLength: 1, opacity: 1 }}
-          transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
-        >
-          <path d="M 90 90 C 70 70, 30 70, 10 90" />
-        </motion.svg>
+                <AnimatedImage src="/arrowl.svg" className="top-20  left-8" />
+         <AnimatedImage src="/arrowl.svg" className="top-20  scale-x-[-1]   right-8" />
+
+       
       </div>
     </motion.section>
   )

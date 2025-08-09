@@ -45,7 +45,7 @@ export default function LogoCloud() {
             <Image
               src={logo.src}
               alt={logo.name}
-              width={200}
+              width={150}
               height={100}
               className="h-10  hover:scale-125 object-contain grayscale hover:grayscale-0 transition-all duration-300"
             />

@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import Image from "next/image"
+import AnimatedImage from "./common/AnimatedArrow"
+import AnimatedRotatingImage from "./common/Animatedflower"
 
 export default function DebitCardSection() {
   const containerVariants = {
@@ -34,7 +36,7 @@ export default function DebitCardSection() {
 
   return (
     <motion.section
-      className="relative w-full py-12 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-white flex flex-col items-center overflow-hidden"
+      className="relative w-full py-12 md:py-24 lg:py-32 px-2 md:px-8 lg:px-16 bg-white flex flex-col items-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -95,6 +97,11 @@ export default function DebitCardSection() {
       {/* Main Grid */}
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center mt-12">
         {/* Left Side - Two Overlapping Cards */}
+
+         <AnimatedRotatingImage
+                         src="/flower.svg"
+                         className="left-4 top-14 md:left-12 "
+                       />
         <motion.div
           className="relative flex justify-center group lg:justify-center items-center h-[400px] md:h-[500px] lg:h-[600px] will-change-transform"
           initial={{ opacity: 0, x: -100 }}
@@ -108,7 +115,7 @@ export default function DebitCardSection() {
             alt="Debit Card Back"
             width={200}
             height={500}
-            className="absolute top-0 bottom-0 m-auto left-0 max-w-[600px] w-[400px] md:w-[600px] group-hover:rotate-[-10deg] transition-all duration-300 right-0 z-10  drop-shadow-lg"
+            className="absolute top-0 bottom-0 m-auto left-0 max-w-[600px] w-[300px] md:w-[600px] group-hover:rotate-[-10deg] transition-all duration-300 right-0 z-10  drop-shadow-lg"
             priority
           />
           {/* back Card */}
@@ -117,13 +124,13 @@ export default function DebitCardSection() {
             alt="Debit Card Front"
             width={200}
             height={500}
-            className=" absolute left-0 right-0 bottom-0 mx-auto max-w-[400px] group-hover:rotate-12 duration-300  w-[200px] md:w-[400px]  drop-shadow-2xl"
+            className=" absolute left-0 right-0 bottom-0 m-auto max-w-[400px] group-hover:rotate-12 duration-300  w-[200px] md:w-[400px]  drop-shadow-2xl"
             priority
           />
         </motion.div>
 
         {/* Right Side */}
-        <div className="flex flex-col justify-center md:justify-start space-y-6 text-center lg:text-left">
+        <div className="flex flex-col gap-4  justify-start md:space-y-6 text-center lg:text-left">
           <motion.div
             className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
@@ -135,7 +142,7 @@ export default function DebitCardSection() {
             Enjoy the flexibility of a Paymint card. Spend anytime, anywhere around the world.
           </motion.p>
 
-          <ul className="space-y-3 text-left self-center lg:self-start" role="list">
+          <ul className="md:space-y-3 text-left self-center lg:self-start" role="list">
             {featureItems.map((item, index) => (
               <motion.li
                 key={item}
@@ -157,6 +164,7 @@ export default function DebitCardSection() {
                             <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
 
             </Button>
+            <AnimatedImage src="/arrowL.svg" className="top-24 left-24 " />
           </motion.div>
         </div>
       </div>

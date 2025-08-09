@@ -4,6 +4,7 @@ import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "./ui/button"
 import { ArrowRight } from "lucide-react"
+import AnimatedImage from "./common/AnimatedArrow"
 
 export default function CashAccessSection() {
   const containerVariants = {
@@ -49,8 +50,10 @@ export default function CashAccessSection() {
                             <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
 
             </Button>
+            
           </motion.div>
       </motion.div>
+                                    <AnimatedImage src="/arrowL.svg" className="bottom-0 left-[50%] " />
     </section>
   )
 }

@@ -10,6 +10,7 @@ import PaymentGatewaySection from "@/components/payment-gateway-section"
 import CashAccessSection from "@/components/cash-access-section"
 import Footer from "@/components/footer"
 import PaymentControlSection2 from "@/components/Payment_control2"
+import PaymentGateway from "@/components/PaymentGateway"
 
 export default function Home() {
   return (
@@ -24,8 +25,7 @@ export default function Home() {
         <PaymentControlSection2/>
         <CurrencySliderSection />
         <DebitCardSection />
-        {/* <PaymentGatewaySection /> */}
-        <PaymentControlSection2/>
+        <PaymentGateway/>
         <CashAccessSection />
       </main>
       <Footer />
