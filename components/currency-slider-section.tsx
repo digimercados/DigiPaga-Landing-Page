@@ -1,5 +1,6 @@
 "use client";
 
+import Container from "@/app/Container";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -40,7 +41,8 @@ const items = [
 
 export default function SmoothLogoSlider() {
   return (
-    <section className="w-full overflow-hidden bg-[#F8F9F4] py-6">
+   <Container>
+     <section className="w-full overflow-hidden bg-[#F8F9F4] py-6">
       <motion.div
         className="flex w-max gap-10"
         animate={{ x: ["0%", "-50%"] }}
@@ -65,5 +67,6 @@ export default function SmoothLogoSlider() {
         ))}
       </motion.div>
     </section>
+   </Container>
   );
 }

@@ -6,6 +6,7 @@ import { Mail, Facebook, Twitter, Instagram, Linkedin, Send } from 'lucide-react
 import SocialIcon from "./social-icon"
 import FooterEmailSignup from "./footer-email-signup"
 import Image from "next/image"
+import Container from "@/app/Container"
 
 export default function Footer() {
   const footerVariants = {
@@ -28,8 +29,9 @@ export default function Footer() {
   ]
 
   return (
-    <motion.footer
-      className="relative w-full py-12 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-white text-gray-700 overflow-hidden"
+    // <Container>
+      <motion.footer
+      className="relative max-w-[1280px]  mx-auto w-full py-12 md:py-24 lg:py-32 px-4 md:px-6 lg:px-8 bg-white text-gray-700 overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -39,7 +41,7 @@ export default function Footer() {
       {/* Background Watermark */}
       
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16 z-10 relative">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-12 z-10 relative">
         {/* Column 1: Logo, Email Signup, Copyright */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left col-span-1 lg:col-span-1">
           <Link href="#" className="flex items-center space-x-2 mb-6" aria-label="DigiMercados Home">
@@ -151,5 +153,6 @@ export default function Footer() {
       </div>
  
     </motion.footer>
+    // </Container>
   )
 }

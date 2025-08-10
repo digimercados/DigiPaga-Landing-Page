@@ -6,6 +6,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import Image from "next/image"
 import AnimatedImage from "./common/AnimatedArrow"
 import AnimatedRotatingImage from "./common/Animatedflower"
+import Container from "@/app/Container"
 
 export default function DebitCardSection() {
   const containerVariants = {
@@ -35,7 +36,8 @@ export default function DebitCardSection() {
   ]
 
   return (
-    <motion.section
+   <Container>
+     <motion.section
       className="relative w-full py-12 md:py-24 lg:py-32 px-2 md:px-8 lg:px-16 bg-white flex flex-col items-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
@@ -43,57 +45,14 @@ export default function DebitCardSection() {
       variants={containerVariants}
       aria-labelledby="debit-card-heading"
     >
-      {/* Blue Star */}
-      {/* <motion.svg
-        className="absolute top-16 left-8 md:left-16 w-16 h-16 md:w-24 md:h-24 text-indigo-500 opacity-70 z-0 will-change-transform"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        variants={starVariants}
-        initial="initial"
-        animate="animate"
-      >
-        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-        <path
-          d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
-          transform="rotate(45 12 12)"
-        />
-      </motion.svg> */}
+      
 
       {/* Heading */}
       <motion.h2 id="debit-card-heading" className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-900 leading-tight z-10 text-center will-change-transform" variants={itemVariants}>
         Instant <span className="text-lime-500">Multi-currency</span> Debit Card
       </motion.h2>
 
-      {/* Arrows */}
-      {/* <div className="flex space-x-8 mt-2 mb-16 z-10">
-        {[0.5, 0.7].map((delay, i) => (
-          <motion.svg
-            key={i}
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="text-lime-500"
-            initial={{ pathLength: 0, opacity: 0 }}
-            animate={{ pathLength: 1, opacity: 1 }}
-            transition={{ duration: 1, delay, ease: "easeOut" }}
-          >
-            <path
-              d="M15 25 V 5 M10 10 L15 5 L20 10"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </motion.svg>
-        ))}
-      </div> */}
-
+     
       {/* Main Grid */}
       <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center mt-12">
         {/* Left Side - Two Overlapping Cards */}
@@ -169,5 +128,6 @@ export default function DebitCardSection() {
         </div>
       </div>
     </motion.section>
+   </Container>
   )
 }

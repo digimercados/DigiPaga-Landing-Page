@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import Container from "@/app/Container"
 
 const logos = [
   { name: "Celo", src: "/cl1.png" },
@@ -31,7 +32,8 @@ export default function LogoCloud() {
   }
 
   return (
-    <motion.section
+    <Container>
+      <motion.section
       className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-white"
       initial="hidden"
       whileInView="visible"
@@ -53,5 +55,6 @@ export default function LogoCloud() {
         ))}
       </div>
     </motion.section>
+    </Container>
   )
 }

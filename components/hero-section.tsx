@@ -5,6 +5,8 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { ArrowRight } from 'lucide-react'
 import EmailSignup from "@/components/email-signup"
 import { useRef } from "react"
+import Container from "@/app/Container"
+import SimpleTyping from "./common/SimpleTyping"
 
 export default function HeroSection() {
   const ref = useRef(null)
@@ -45,27 +47,36 @@ export default function HeroSection() {
     }),
   }
 
+  const phrases = [
+    "Control your Finances",
+    "Control your Crypto Conversions",
+    "Control your Utility Bills",
+    "Control your Invoices",
+    "Control your Remittances",
+  ];
+
   return (
-    <motion.section
+    <Container>
+      <motion.section
       ref={ref}
       className="relative w-full py-12 md:py-24 lg:py-16 px-4 md:px-8 lg:px-16 bg-white overflow-hidden"
       initial="hidden"
       animate="visible"
       variants={containerVariants}
     >
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-8 items-center">
         {/* Left Content */}
         <div className="flex flex-col space-y-6 text-center lg:text-left">
           <motion.div
-            className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-4 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
+            className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-2 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
             Access your Dashboard
             <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
           </motion.div>
 
-          <motion.h1 className="text-4xl md:text-5xl lg:text-[65px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform" variants={itemVariants}>
-            Control <span className="text-lime-500">your Finances</span> using Stablecoins on{" "}
+          <motion.h1 className="text-4xl h-[300px] md:h-[300px]   md:text-5xl lg:text-[50px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform" variants={itemVariants}>
+            Control <span className="text-lime-500"><SimpleTyping texts={phrases} /></span> using Stablecoins on 
             <span className="text-lime-500">Celo Network</span>
           </motion.h1>
 
@@ -81,57 +92,7 @@ export default function HeroSection() {
 
         {/* Right Image and Background Elements */}
         <div className="relative  flex justify-center lg:justify-end items-center h-[400px] md:h-[500px] lg:h-[600px] mt-12 lg:mt-0">
-          {/* Background Shapes */}
-          {/* <motion.div
-            className="absolute bg-lime-400 rounded-full w-24 h-24 -top-8 left-1/4 lg:left-1/3 opacity-70 will-change-transform"
-            variants={backgroundShapeVariants}
-            custom={0}
-            animate={{ y: [0, -10, 0], rotate: [0, 10, 0] }}
-            transition={{ repeat: Infinity, duration: 8, ease: "easeInOut" }}
-          />
-          <motion.div
-            className="absolute bg-gray-200 rounded-lg w-16 h-16 bottom-1/4 right-1/4 lg:right-1/3 rotate-45 opacity-70 will-change-transform"
-            variants={backgroundShapeVariants}
-            custom={1}
-            animate={{ y: [0, 10, 0], rotate: [45, 55, 45] }}
-            transition={{ repeat: Infinity, duration: 7, ease: "easeInOut", delay: 0.5 }}
-          />
-          <motion.div
-            className="absolute bg-lime-400 rounded-lg w-20 h-20 bottom-1/3 right-1/2 lg:right-1/4 rotate-12 opacity-70 will-change-transform"
-            variants={backgroundShapeVariants}
-            custom={2}
-            animate={{ x: [0, 10, 0], rotate: [12, 22, 12] }}
-            transition={{ repeat: Infinity, duration: 9, ease: "easeInOut", delay: 1 }}
-          />
-          <motion.div
-            className="absolute bg-gray-200 rounded-full w-12 h-12 top-1/3 left-1/3 lg:left-1/4 opacity-70 will-change-transform"
-            variants={backgroundShapeVariants}
-            custom={3}
-            animate={{ x: [0, -10, 0], rotate: [0, -10, 0] }}
-            transition={{ repeat: Infinity, duration: 6, ease: "easeInOut", delay: 1.5 }}
-          /> */}
-
-          {/* Connecting Lines/Stars */}
-          {/* <motion.div
-            className="absolute w-2 h-2 bg-lime-400 rounded-full top-1/4 left-1/4 lg:left-1/3 will-change-transform"
-            variants={backgroundShapeVariants}
-            custom={4}
-          /> */}
-          {/* <motion.div
-            className="absolute w-2 h-2 bg-gray-400 rounded-full bottom-1/4 right-1/4 lg:right-1/3 will-change-transform"
-            variants={backgroundShapeVariants}
-            custom={5}
-          /> */}
-          {/* <motion.div
-            className="absolute w-px h-24 bg-gray-300 rotate-45 top-1/4 left-1/4 lg:left-1/3 origin-top-left will-change-transform"
-            variants={backgroundShapeVariants}
-            custom={6}
-          /> */}
-          {/* <motion.div
-            className="absolute w-px h-32 bg-gray-300 -rotate-45 bottom-1/4 right-1/4 lg:right-1/3 origin-bottom-right will-change-transform"
-            variants={backgroundShapeVariants}
-            custom={7}
-          /> */}
+        
 
           {/* Phone Image */}
           <motion.div
@@ -167,5 +128,6 @@ export default function HeroSection() {
         </div>
       </div>
     </motion.section>
+    </Container>
   )
 }

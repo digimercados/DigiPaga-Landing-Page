@@ -7,6 +7,7 @@ import { CheckCircle2 } from 'lucide-react'
 import RotatingSVG from "./common/Animatedflower"
 import AnimatedImage from "./common/AnimatedArrow"
 import AnimatedRotatingImage from "./common/Animatedflower"
+import Container from "@/app/Container"
 
 export default function PaymentControlSection() {
   const containerVariants = {
@@ -30,7 +31,8 @@ export default function PaymentControlSection() {
   }
 
   return (
-    <motion.section
+    <Container>
+      <motion.section
       className="relative w-full py-6 md:py-8 lg:py-14 px-4 md:px-8 lg:px-16 bg-white flex flex-col items-center text-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
@@ -111,5 +113,6 @@ export default function PaymentControlSection() {
         </div>
       </div>
     </motion.section>
+    </Container>
   )
 }

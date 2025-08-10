@@ -7,6 +7,7 @@ import { Wallet, CreditCard, Bitcoin, LandPlot, Menu, X } from 'lucide-react'
 import { useState } from "react"
 import LocaleSwitcher from "./locale-switcher"
 import Image from "next/image"
+import Container from "@/app/Container"
 
 const navItems = [
   { icon: CreditCard, text: "Pay Utility Bill" },
@@ -28,8 +29,9 @@ export default function Header() {
   }
 
   return (
-    <motion.nav
-      className="relative z-50 w-full px-4 py-4 md:px-8 lg:px-16 flex items-center justify-between will-change-transform"
+    <Container>
+      <motion.nav
+      className="relative z-50 w-full px-4 py-4 md:px-2 lg:px-4 flex items-center justify-between will-change-transform"
       initial="hidden"
       animate="visible"
       variants={headerVariants}
@@ -125,5 +127,6 @@ export default function Header() {
         )}
       </AnimatePresence>
     </motion.nav>
+    </Container>
   )
 }

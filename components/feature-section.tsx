@@ -9,6 +9,7 @@ import AnimatedFlower from "./ui/AnimatedFlower"
 import AnimatedArrow from "./common/AnimatedArrow"
 import AnimatedImage from "./common/AnimatedArrow"
 import AnimatedRotatingImage from "./common/Animatedflower"
+import Container from "@/app/Container"
 
 export default function FeatureSection() {
   const ref = useRef(null)
@@ -46,7 +47,8 @@ export default function FeatureSection() {
   }
 
   return (
-    <motion.section
+    <Container>
+      <motion.section
       ref={ref}
       className="relative svg w-full py-12 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-white overflow-hidden"
       initial="hidden"
@@ -106,5 +108,6 @@ export default function FeatureSection() {
         </motion.div>
       </div>
     </motion.section>
+    </Container>
   )
 }

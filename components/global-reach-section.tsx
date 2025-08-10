@@ -5,6 +5,7 @@ import DottedWorldMap from "./dotted-world-map"
 import AppIconCard from "./app-icon-card"
 import Image from "next/image"
 import AnimatedImage from "./common/AnimatedArrow"
+import Container from "@/app/Container"
 
 const appIcons = [
   { name: "Telegram", src: "/tel.png" },
@@ -35,7 +36,8 @@ export default function GlobalReachSection() {
   }
 
   return (
-    <motion.section
+   <Container>
+     <motion.section
       className="relative w-full py-0 md:py-0 lg:py-32 px-4 md:px-8 lg:px-16 bg-white flex flex-col items-center text-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
@@ -87,5 +89,6 @@ export default function GlobalReachSection() {
        
       </div>
     </motion.section>
+   </Container>
   )
 }

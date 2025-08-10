@@ -20,8 +20,10 @@ export default function LocaleSwitcher({ isMobile = false }: LocaleSwitcherProps
 
   const locales = [
     { code: "en", name: "English" },
-    { code: "es", name: "Español" },
-    { code: "fr", name: "Français" },
+    { code: "es", name: "Spanish" },
+    { code: "fr", name: "Portuguese" },
+    { code: "fr", name: "Italian" },
+    { code: "fr", name: " French" },
   ]
 
   return (

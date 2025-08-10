@@ -5,6 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import AnimatedRotatingImage from "./common/Animatedflower"
+import Container from "@/app/Container"
 
 export default function PaymentControlSection2() {
   const containerVariants = {
@@ -35,7 +36,8 @@ export default function PaymentControlSection2() {
   ]
 
   return (
-    <motion.section
+    <Container>
+      <motion.section
       className="relative w-full py-12 md:py-16 lg:py-24 px-4 md:px-8 lg:px-16 bg-gray-50 gap-6  md:gap-12 flex flex-col items-center text-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
@@ -124,5 +126,6 @@ export default function PaymentControlSection2() {
         
       </div>
     </motion.section>
+    </Container>
   )
 }

@@ -6,18 +6,20 @@ import GlobalReachSection from "@/components/global-reach-section"
 import PaymentControlSection from "@/components/payment-control-section"
 import CurrencySliderSection from "@/components/currency-slider-section"
 import DebitCardSection from "@/components/debit-card-section"
-import PaymentGatewaySection from "@/components/payment-gateway-section"
+// import PaymentGatewaySection from "@/components/payment-gateway-section"
 import CashAccessSection from "@/components/cash-access-section"
 import Footer from "@/components/footer"
 import PaymentControlSection2 from "@/components/Payment_control2"
 import PaymentGateway from "@/components/PaymentGateway"
+import Container from "./Container"
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <Header />
       <main>
-        <HeroSection />
+        {/* <Container> */}
+          <HeroSection />
         <LogoCloud />
         <FeatureSection />
         <GlobalReachSection />
@@ -27,6 +29,7 @@ export default function Home() {
         <DebitCardSection />
         <PaymentGateway/>
         <CashAccessSection />
+        {/* </Container> */}
       </main>
       <Footer />
     </div>
