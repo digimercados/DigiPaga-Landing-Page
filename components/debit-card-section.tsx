@@ -54,7 +54,7 @@ export default function DebitCardSection() {
 
      
       {/* Main Grid */}
-      <div className="container mx-auto grid lg:grid-cols-2 gap-12 items-center mt-12">
+      <div className="container mx-auto grid lg:grid-cols-2 gap-3 items-center mt-12">
         {/* Left Side - Two Overlapping Cards */}
 
          <AnimatedRotatingImage
@@ -74,7 +74,8 @@ export default function DebitCardSection() {
             alt="Debit Card Back"
             width={200}
             height={500}
-            className="absolute top-0 bottom-0 m-auto left-0 max-w-[600px] w-[300px] md:w-[600px] group-hover:rotate-[-10deg] transition-all duration-300 right-0 z-10  drop-shadow-lg"
+            className="absolute top-0 bottom-0 m-auto left-0 
+             group-hover:rotate-[-10deg] transition-all duration-300 right-0 z-10  drop-shadow-lg"
             priority
           />
           {/* back Card */}
@@ -83,7 +84,7 @@ export default function DebitCardSection() {
             alt="Debit Card Front"
             width={200}
             height={500}
-            className=" absolute left-0 right-0 bottom-0 m-auto max-w-[400px] group-hover:rotate-12 duration-300  w-[200px] md:w-[400px]  drop-shadow-2xl"
+            className=" left-0 right-0 bottom-0 m-auto max-w-[400px] group-hover:rotate-12 duration-300  w-[200px] md:w-full  drop-shadow-2xl"
             priority
           />
         </motion.div>
@@ -126,6 +127,7 @@ export default function DebitCardSection() {
             <AnimatedImage src="/arrowL.svg" className="top-24 left-24 " />
           </motion.div>
         </div>
+        
       </div>
     </motion.section>
    </Container>

@@ -9,6 +9,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function AnimatedRotatingImage({ src, className = "" }) {
   const wrapperRef = useRef(null);
+  const parentRef = useRef(null); // parent container
 
   useEffect(() => {
     gsap.fromTo(
@@ -21,9 +22,9 @@ export default function AnimatedRotatingImage({ src, className = "" }) {
         duration: 1.2,
         ease: "power2.out",
         scrollTrigger: {
-          trigger: wrapperRef.current,
+          trigger: parentRef.current, // parent is now trigger
           start: "top 90%",
-          end: "top 50%",
+          end: "bottom 10%",
           scrub: true,
         },
       }
@@ -31,14 +32,16 @@ export default function AnimatedRotatingImage({ src, className = "" }) {
   }, []);
 
   return (
-    <div ref={wrapperRef} className={`absolute pointer-events-none ${className}`}>
-      <Image
-        src={src}
-        alt=""
-        width={100}
-        height={100}
-        className="object-contain"
-      />
+    <div ref={parentRef} className="absolute w-full h-full">
+      <div ref={wrapperRef} className={`absolute pointer-events-none ${className}`}>
+        <Image
+          src={src}
+          alt=""
+          width={100}
+          height={100}
+          className="object-contain"
+        />
+      </div>
     </div>
   );
 }

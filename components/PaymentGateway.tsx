@@ -38,7 +38,7 @@ export default function PaymentGateway() {
   return (
     <Container>
       <motion.section
-      className="relative w-full py-12 md:py-16 lg:py-24 px-4 md:px-8 lg:px-16 bg-gray-50 flex flex-col items-center text-center overflow-hidden"
+      className="relative w-full py-12 md:py-16 lg:py-24 px-4 md:px-8 lg:px-16  flex flex-col items-center text-center overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -81,7 +81,7 @@ export default function PaymentGateway() {
        
 
         {/* Right Content Column */}
-        <div className="flex flex-col bg-gray-50 px-4 md:px-14 py-10  rounded-xl space-y-6 text-center items-center md:items-start lg:text-left">
+        <div className="flex flex-col  px-4 md:px-14 py-10  rounded-xl space-y-6 text-center items-center md:items-start lg:text-left">
           <motion.div
             className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}

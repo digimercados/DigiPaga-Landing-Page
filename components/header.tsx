@@ -3,16 +3,16 @@
 import Link from "next/link"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { Wallet, CreditCard, Bitcoin, LandPlot, Menu, X } from 'lucide-react'
+import { Wallet, CreditCard, Bitcoin, LandPlot, Menu, X, ScrollText, Smile, ClipboardList } from 'lucide-react'
 import { useState } from "react"
 import LocaleSwitcher from "./locale-switcher"
 import Image from "next/image"
 import Container from "@/app/Container"
 
 const navItems = [
-  { icon: CreditCard, text: "Pay Utility Bill" },
-  { icon: Bitcoin, text: "Convert Crypto" },
-  { icon: LandPlot, text: "Digi Pay" },
+  { icon: ScrollText, text: "Illustrations on bill" },
+  { icon: Smile, text: "Convert" },
+  { icon:ClipboardList , text: " Invoice" },
 ]
 
 export default function Header() {
@@ -71,9 +71,10 @@ export default function Header() {
               href="#"
               className={buttonVariants({ variant: "outline", size: "sm" }) + " rounded-full px-4 py-2"}
               aria-label={item.text}
-            >
-              <item.icon className="h-4 w-4 mr-2" />
-              {item.text}
+            > 
+            {item.text}
+              <item.icon className="h-4 w-4 mr-2" /> 
+             
             </Link>
           </motion.div>
         ))}

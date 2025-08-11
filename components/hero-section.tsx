@@ -1,133 +1,155 @@
-"use client"
+  "use client"
 
-import Image from "next/image"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight } from 'lucide-react'
-import EmailSignup from "@/components/email-signup"
-import { useRef } from "react"
-import Container from "@/app/Container"
-import SimpleTyping from "./common/SimpleTyping"
+  import Image from "next/image"
+  import { motion, useScroll, useTransform } from "framer-motion"
+  import { ArrowRight } from 'lucide-react'
+  import EmailSignup from "@/components/email-signup"
+  import { useRef } from "react"
+  import Container from "@/app/Container"
+  import SimpleTyping from "./common/SimpleTyping"
+import AnimatedImage from "./common/AnimatedArrow"
 
-export default function HeroSection() {
-  const ref = useRef(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  })
+  export default function HeroSection() {
+    const ref = useRef(null)
+    const { scrollYProgress } = useScroll({
+      target: ref,
+      offset: ["start end", "end start"],
+    })
 
-  const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"])
-  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.05])
+    const y = useTransform(scrollYProgress, [0, 1], ["-10%", "10%"])
+    const scale = useTransform(scrollYProgress, [0, 1], [1, 1.05])
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
+    const containerVariants = {
+      hidden: { opacity: 0 },
+      visible: {
+        opacity: 1,
+        transition: {
+          staggerChildren: 0.2,
+        },
       },
-    },
-  }
+    }
 
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-  }
+    const itemVariants = {
+      hidden: { opacity: 0, y: 20 },
+      visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    }
 
-  const phoneVariants = {
-    hidden: { opacity: 0, x: 100, rotate: 10 },
-    visible: { opacity: 1, x: 0, rotate: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.5 } },
-  }
+    const phoneVariants = {
+      hidden: { opacity: 0, x: 100, rotate: 10 },
+      visible: { opacity: 1, x: 0, rotate: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.4 } },
+    }
+    const phoneVariants2 = {
+      hidden: { opacity: 0, y: 100, rotate: 10 },
+      visible: { opacity: 1, y: 0, rotate: 0, transition: { duration: 0.8, ease: "easeOut", delay: 0.7 } },
+    }
 
-  const backgroundShapeVariants = {
-    hidden: { opacity: 0, scale: 0.5 },
-    visible: (i: number) => ({
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.8, ease: "easeOut", delay: 0.8 + i * 0.1 },
-    }),
-  }
+    const backgroundShapeVariants = {
+      hidden: { opacity: 0, scale: 0.5 },
+      visible: (i: number) => ({
+        opacity: 1,
+        scale: 1,
+        transition: { duration: 0.8, ease: "easeOut", delay: 0.8 + i * 0.1 },
+      }),
+    }
 
-  const phrases = [
-    "Control your Finances",
-    "Control your Crypto Conversions",
-    "Control your Utility Bills",
-    "Control your Invoices",
-    "Control your Remittances",
-  ];
+    const phrases = [
+      "Control your Finances",
+      "Control your Crypto Conversions",
+      "Control your Utility Bills",
+      "Control your Invoices",
+      "Control your Remittances",
+    ];
 
-  return (
-    <Container>
-      <motion.section
-      ref={ref}
-      className="relative w-full py-12 md:py-24 lg:py-16 px-4 md:px-8 lg:px-16 bg-white overflow-hidden"
-      initial="hidden"
-      animate="visible"
-      variants={containerVariants}
-    >
-      <div className="container mx-auto grid lg:grid-cols-2 gap-8 items-center">
-        {/* Left Content */}
-        <div className="flex flex-col space-y-6 text-center lg:text-left">
-          <motion.div
-            className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-2 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
-            variants={itemVariants}
-          >
-            Access your Dashboard
-            <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
-          </motion.div>
+    return (
+      <Container>
+        <motion.section
+        ref={ref}
+        className="relative w-full py-12 md:py-24 lg:py-16 px-4  bg-white overflow-hidden"
+        initial="hidden"
+        animate="visible"
+        variants={containerVariants}
+      >
+        <div className="container mx-auto grid lg:grid-cols-2 gap-8 items-center">
+          {/* Left Content */}
+          <div className="flex flex-col space-y-6 text-center lg:text-left">
+            <motion.div
+              className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-2 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
+              variants={itemVariants}
+            >
+              Access your Dashboard
+              <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
+            </motion.div>
 
-          <motion.h1 className="text-4xl h-[300px] md:h-[300px]   md:text-5xl lg:text-[50px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform" variants={itemVariants}>
-            Control <span className="text-lime-500"><SimpleTyping texts={phrases} /></span> using Stablecoins on 
-            <span className="text-lime-500">Celo Network</span>
-          </motion.h1>
+            <motion.h1 className="text-4xl flex-col flex  md:text-5xl lg:text-[50px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform" variants={itemVariants}>
+              <span> Control <span className="text-lime-500"><SimpleTyping texts={phrases} /></span></span>
+               using Stablecoins on  <br />
+              <span className="text-lime-500"> Celo Network</span>
+            </motion.h1>
 
-          <motion.p className="max-w-xl mx-auto  font-[400] lg:mx-0 text-[20px] md:text-xl text-gray-600 will-change-transform" variants={itemVariants}>
-            DigiPaga allows you to pay utility bills, convert fiat into crypto, and manage invoices from your same
-            Dashboard.
-          </motion.p>
+            <motion.p className="max-w-xl mx-auto  font-[400] lg:mx-0 text-[20px] md:text-xl text-gray-600 will-change-transform" variants={itemVariants}>
+              DigiPaga allows you to pay utility bills, convert fiat into crypto, and manage invoices from your same
+              Dashboard.
+            </motion.p>
 
-          <motion.div className="mt-8 will-change-transform" variants={itemVariants}>
-            <EmailSignup />
-          </motion.div>
-        </div>
+            <motion.div className="mt-8 will-change-transform" variants={itemVariants}>
+              <EmailSignup />
+                          <AnimatedImage src="/arrowL.svg" className="top-12 right-0" />
+              
+            </motion.div>
+          </div>
 
-        {/* Right Image and Background Elements */}
-        <div className="relative  flex justify-center lg:justify-end items-center h-[400px] md:h-[500px] lg:h-[600px] mt-12 lg:mt-0">
-        
-
-          {/* Phone Image */}
-          <motion.div
-            className="relative  w-full   will-change-transform"
-            variants={phoneVariants}
-            style={{  scale }}
-            // Removed whileInView and viewport to ensure animation on reload
-          >
-            <Image
-              src="/h.png"
-              width={300}
-              height={600}
-              alt="Mobile App Interface showing relative financial dashboard"
-              className="object-contain w-full   z-10  h-full max-w-[500px] md:max-w-[688px] lg:max-w-[680px]"
-            />
-
-
-            {/* background image */}
-            
-<Image
-              src="/hbg1.png"
-              width={300}
-              height={600}
-              alt="Mobile App Interface showing financial dashboard"
-              className="object-contain -z-10   top-[125px] -right-10
-                absolute w-full h-full max-w-[500px] md:max-w-[688px] lg:max-w-[680px]"
-            />
-            
-          </motion.div>
+          {/* Right Image and Background Elements */}
+          <div className="relative  flex justify-center lg:justify-end items-center h-[400px] md:h-[500px] lg:h-[600px] mt-12 lg:mt-0">
           
 
+            {/* Phone Image */}
+            <motion.div
+              className="relative  w-full z-50  will-change-transform"
+              variants={phoneVariants}
+              style={{  scale }}
+              // Removed whileInView and viewport to ensure animation on reload
+            >
+              <Image
+                src="/h.png"
+                width={300}
+                height={600}
+                alt="Mobile App Interface showing relative financial dashboard"
+                className="object-contain w-full     h-full max-w-[500px] md:max-w-[688px] lg:max-w-[680px]"
+              />
 
+
+              {/* background image */}
+              
+     
+              
+            </motion.div>
+            <motion.div
+              className="absolute  w-full bottom-0 z-10 right-0  will-change-transform"
+              variants={phoneVariants2}
+              style={{  scale }}
+              // Removed whileInView and viewport to ensure animation on reload
+            >
+             <Image
+                    src="/hbg1.png"
+                    width={300}
+                    height={600}
+                    alt="Mobile App Interface showing financial dashboard"
+                    className="object-contain z-10 -translate-y-20 delay-75 duration-300    
+                       "
+                  />
+
+
+              {/* background image */}
+              
+     
+              
+            </motion.div>
+            
+ 
+
+          </div>
         </div>
-      </div>
-    </motion.section>
-    </Container>
-  )
-}
+      </motion.section>
+      </Container>
+    )
+  }

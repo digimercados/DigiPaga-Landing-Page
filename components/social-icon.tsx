@@ -20,7 +20,7 @@ export default function SocialIcon({ icon: Icon, name, color, index }: SocialIco
 
   return (
     <motion.div
-      className={`w-10 h-10 rounded-full flex items-center justify-center ${color} text-white will-change-transform`}
+      className={`w-8 h-8 rounded-full flex items-center justify-center ${color} text-white will-change-transform`}
       variants={itemVariants}
       initial="hidden"
       whileInView="visible"

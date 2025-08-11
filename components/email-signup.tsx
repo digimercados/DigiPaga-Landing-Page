@@ -22,7 +22,7 @@ export default function EmailSignup() {
           aria-label="Email address"
         />
       </div>
-      <Button className="bg-green-700 md:absolute right-0 hover:bg-green-800 text-white rounded-full px-6 py-2 w-full sm:w-auto" aria-label="Register for updates">
+      <Button className="bg-[#296253] md:absolute right-0 hover:bg-green-800 text-[#B7DF30] rounded-full px-6 py-2 w-full sm:w-auto" aria-label="Register for updates">
         Register
       </Button>
     </motion.div>
