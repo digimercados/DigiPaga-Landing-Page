@@ -49,7 +49,7 @@ export default function LogoCloud() {
               className="will-change-transform"
               whileHover={{
                 scale: 1.4,
-                rotate: [0, 10, -10, 10, 0],
+                // rotate: [0, 10, -10, 10, 0],
                 transition: { duration: 0.8, ease: "easeInOut" },
                 filter: "grayscale(0%)",
               }}

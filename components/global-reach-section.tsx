@@ -62,7 +62,7 @@ export default function GlobalReachSection() {
      
       {/* Heading */}
       <motion.h2 id="global-reach-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight mt-16 md:mt-24 z-10 will-change-transform" variants={itemVariants}>
-        Access cash in <span className="text-lime-500">350,000 locations</span> in 180 countries
+        Access cash in <span className="text-[#B7DF30]">350,000 locations</span> in 180 countries
          <AnimatedImage  className="top-16   left-14" />
       </motion.h2>
       
@@ -76,7 +76,7 @@ export default function GlobalReachSection() {
 
       {/* Instant Crypto Section */}
       <motion.h3 className="text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900 leading-tight mt-16 z-10 will-change-transform" variants={itemVariants}>
-        Instant <span className="text-lime-500">Crypto</span>
+        Instant <span className="text-[#B7DF30]">Crypto</span>
       </motion.h3>
       <motion.p className="text-lg md:text-xl text-gray-600 mt-2 mb-8 z-10 will-change-transform" variants={itemVariants}>
         Buy, Sell, Send and Receive using your Favourite Apps

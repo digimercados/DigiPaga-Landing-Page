@@ -3,6 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AnimatedRotatingImage from "./Animatedflower";
+import AnimatedImage from "./AnimatedArrow";
 
 interface ImageContentProps {
   badgeText?: string;
@@ -67,7 +68,7 @@ export const ImageContent: React.FC<ImageContentProps> = ({
             width={400}
             height={500}
             alt={imageAlt}
-            className="object-cover rounded-[1.5rem] w-full h-full max-w-[350px] md:max-w-[400px] lg:max-w-[450px]"
+            className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[350px] md:max-w-[300px] lg:max-w-[400px]"
           />
         </div>
         
@@ -83,7 +84,7 @@ export const ImageContent: React.FC<ImageContentProps> = ({
         }`} // ✅ Conditionally add background
       >
         <motion.div
-          className="inline-flex  justify-center lg:justify-start bg-[#296253]/10 text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+          className="inline-flex  justify-center lg:justify-start bg-[#B7DF30]  text-white text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
           variants={itemVariants}
         >
           {badgeText}
@@ -93,7 +94,7 @@ export const ImageContent: React.FC<ImageContentProps> = ({
           className="text-3xl md:text-4xl lg:text-[40px] tracking-tight text-gray-900 leading-tight will-change-transform"
           variants={itemVariants}
         >
-          {title} <span className="text-lime-500">{highlightText}</span>
+          {title} <span className="text-[#B7DF30]">{highlightText}</span>
         </motion.h3>
 
         <motion.p
@@ -114,8 +115,12 @@ export const ImageContent: React.FC<ImageContentProps> = ({
             >
               <a href={buttonLink} aria-label={buttonText}>
                 {buttonText}
+                
               </a>
+              
             </Button>
+
+            
           </motion.div>
         )}
       </motion.div>

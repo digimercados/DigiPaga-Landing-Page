@@ -3,16 +3,16 @@
 import Link from "next/link"
 import { Button, buttonVariants } from "@/components/ui/button"
 import { motion, AnimatePresence } from "framer-motion"
-import { Wallet, CreditCard, Bitcoin, LandPlot, Menu, X, ScrollText, Smile, ClipboardList } from 'lucide-react'
+import { Wallet, CreditCard, Bitcoin, LandPlot, Menu, X, ScrollText, Smile, ClipboardList, Coins, CircleDollarSign } from 'lucide-react'
 import { useState } from "react"
 import LocaleSwitcher from "./locale-switcher"
 import Image from "next/image"
 import Container from "@/app/Container"
 
 const navItems = [
-  { icon: ScrollText, text: "Illustrations on bill" },
-  { icon: Smile, text: "Convert" },
-  { icon:ClipboardList , text: " Invoice" },
+  { icon: ScrollText, text: "Utility Bills" },
+  { icon: CircleDollarSign, text: "Convert Crypto" },
+  { icon:ClipboardList , text: " Invoices" },
 ]
 
 export default function Header() {
@@ -29,7 +29,7 @@ export default function Header() {
   }
 
   return (
-    <Container>
+    // <Container>
       <motion.nav
       className="relative z-50 w-full px-4 py-4 md:px-2 lg:px-4 flex items-center justify-between will-change-transform"
       initial="hidden"
@@ -52,8 +52,8 @@ export default function Header() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.7, duration: 0.5 }}
         >
-                    <Image alt="logo" src="/logo.png" width={150} height={150}/>
-        </motion.span>
+                    <Image alt="logo" src="/logo.png" className=" max-w-[200px] w-[200px] " width={150} height={50}/>
+        </motion.span> 
       </Link>
 
       {/* Mobile Menu Button */}
@@ -64,7 +64,7 @@ export default function Header() {
       </div>
 
       {/* Navigation Items (Desktop) */}
-      <div className="hidden md:flex items-center space-x-2 lg:space-x-4">
+      <div className="hidden md:flex items-center  gap-6 ">
         {navItems.map((item, index) => (
           <motion.div key={item.text} variants={navItemVariants} initial="hidden" animate="visible" custom={index}>
             <Link
@@ -128,6 +128,6 @@ export default function Header() {
         )}
       </AnimatePresence>
     </motion.nav>
-    </Container>
+    // </Container>
   )
 }

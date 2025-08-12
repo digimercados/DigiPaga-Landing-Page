@@ -49,7 +49,7 @@ export default function DebitCardSection() {
 
       {/* Heading */}
       <motion.h2 id="debit-card-heading" className="text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-gray-900 leading-tight z-10 text-center will-change-transform" variants={itemVariants}>
-        Instant <span className="text-lime-500">Multi-currency</span> Debit Card
+        Instant <span className="text-[#B7DF30]">Multi-currency</span> Debit Card
       </motion.h2>
 
      
@@ -94,7 +94,7 @@ export default function DebitCardSection() {
         {/* Right Side */}
         <div className="flex flex-col gap-4  justify-start md:space-y-6 text-center lg:text-left">
           <motion.div
-            className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+            className="inline-flex items-center justify-center lg:justify-start bg-[#B7DF30]  text-white text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
             Payment Card
@@ -113,7 +113,7 @@ export default function DebitCardSection() {
                 custom={index}
                 role="listitem"
               >
-                <CheckCircle2 className="h-6 w-6 text-lime-500 mr-3 flex-shrink-0" aria-hidden="true" />
+                <CheckCircle2 className="h-6 w-6 text-[#B7DF30] mr-3 flex-shrink-0" aria-hidden="true" />
                 {item}
               </motion.li>
             ))}

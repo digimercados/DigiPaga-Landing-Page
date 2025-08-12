@@ -30,9 +30,9 @@ export default function PaymentGateway() {
 
 
     const featureItems = [
-    "Generate QR Code and get Paid.",
-    "Easy to Implement for any SME ",
-    "No Minimum Balance",
+    "Enable QR Code and get paid",
+    "Easy to Implement for any SME",
+    "Instant transactions",
   ]
 
   return (
@@ -49,7 +49,7 @@ export default function PaymentGateway() {
 
        {/* Heading */}
       <motion.h2 id="debit-card-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight z-10 text-center will-change-transform" variants={itemVariants}>
-     Grow Your Sales With <span className="text-lime-500">DigiPaga Payment </span>Gateway
+     Grow Your Sales With <span className="text-[#B7DF30]">DigiPaga Payment </span>Gateway
       </motion.h2>
      
   
@@ -71,7 +71,7 @@ export default function PaymentGateway() {
               width={400}
               height={500}
               alt="Woman using mobile app on couch"
-              className="object-cover rounded-[1.5rem] w-full h-full max-w-[350px] md:max-w-[400px] lg:max-w-[550px]"
+              className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[350px] md:max-w-[300px] lg:max-w-[400px]"
             />
             
           
@@ -81,9 +81,9 @@ export default function PaymentGateway() {
        
 
         {/* Right Content Column */}
-        <div className="flex flex-col  px-4 md:px-14 py-10  rounded-xl space-y-6 text-center items-center md:items-start lg:text-left">
+        <div className="flex flex-col  px-4 md:px-6 py-10  rounded-xl space-y-6 text-center items-center md:items-start lg:text-left">
           <motion.div
-            className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+            className="inline-flex items-center justify-center lg:justify-start bg-[#B7DF30]  text-white text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
             Payment Card
@@ -102,7 +102,7 @@ export default function PaymentGateway() {
                 custom={index}
                 role="listitem"
               >
-                <CheckCircle2 className="h-6 w-6 text-lime-500 mr-3 flex-shrink-0" aria-hidden="true" />
+                <CheckCircle2 className="h-6 w-6 text-[#B7DF30] mr-3 flex-shrink-0" aria-hidden="true" />
                 {item}
               </motion.li>
             ))}

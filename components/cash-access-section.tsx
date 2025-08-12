@@ -46,7 +46,7 @@ export default function CashAccessSection() {
 
         {/* Right Illustration Column */}
           <motion.div className="mt-8 will-change-transform" variants={itemVariants}>
-            <Button className="bg-[#C1EA35] group hover:bg-[#C4FE00] text-black rounded-full px-8 py-6 hover:scale-105 duration-200 flex items-center self-center lg:self-start" aria-label="Learn more about the debit card">
+            <Button className="bg-[#B7DF30] group hover:bg-[#C4FE00] text-black rounded-full px-8 py-6 hover:scale-105 duration-200 flex items-center self-center lg:self-start" aria-label="Learn more about the debit card">
               Learn more
              
                             <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
