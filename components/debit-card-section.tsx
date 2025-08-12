@@ -62,29 +62,31 @@ export default function DebitCardSection() {
                          className="left-4 top-14 md:left-12 "
                        />
         <motion.div
-          className="relative flex justify-center group lg:justify-center items-center h-[400px] md:h-[500px] lg:h-[600px] will-change-transform"
+          className="relative flex justify-center group lg:justify-center items-center h-[400px] md:h-[500px] lg:h-[500px] will-change-transform"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           {/* front Card */}
-          <Image
+      
+            <Image
             src="/card.svg"
             alt="Debit Card Back"
-            width={200}
-            height={500}
-            className="absolute top-0 bottom-0 m-auto left-0 
-             group-hover:rotate-[-10deg] transition-all duration-300 right-0 z-10  drop-shadow-lg"
-            priority
+            width={400}
+            height={600}
+            className="absolute top-0 
+             group-hover:rotate-[-10deg] transition-all duration-300 right-0 z-40 w-full   drop-shadow-lg"
+        
           />
+       
           {/* back Card */}
           <Image
             src="/card2.svg"
             alt="Debit Card Front"
-            width={200}
-            height={500}
-            className=" left-0 right-0 bottom-0 m-auto max-w-[400px] group-hover:rotate-12 duration-300  w-[200px] md:w-full  drop-shadow-2xl"
+            width={400}
+            height={600}
+            className=" left-0 right-0 bottom-0 m-auto max-w-[350px] group-hover:rotate-12 duration-300  w-full  drop-shadow-2xl"
             priority
           />
         </motion.div>

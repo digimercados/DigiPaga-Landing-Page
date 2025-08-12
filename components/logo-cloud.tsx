@@ -31,14 +31,14 @@ export default function LogoCloud() {
   return (
     <Container>
       <motion.section
-        className="w-full py-12 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-white"
+        className="w-full py-12 md:py-24 lg:py-32 px-2 md:px-8 lg:px-16 bg-white"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={containerVariants}
         aria-label="Partner Logos"
       >
-        <div className="container mx-auto flex flex-wrap justify-center items-center gap-8 md:gap-8 lg:gap-12">
+        <div className="container mx-auto flex flex-wrap justify-center items-center gap-4 md:gap-8 lg:gap-12">
           {logos.map((logo, index) => (
             <motion.a
               key={logo.name}
@@ -60,7 +60,7 @@ export default function LogoCloud() {
                 alt={logo.name}
                 width={150}
                 height={100}
-                className="h-10 object-contain grayscale transition-all duration-300"
+                className="h-10 object-contain grayscale w-[80px] md:w-[150px] transition-all duration-300"
               />
             </motion.a>
           ))}

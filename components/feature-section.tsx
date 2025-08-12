@@ -50,7 +50,7 @@ export default function FeatureSection() {
     <Container>
       <motion.section
       ref={ref}
-      className="relative svg w-full py-12 md:py-24 lg:py-32 px-4 md:px-8 lg:px-16 bg-white overflow-hidden"
+      className="relative svg w-full py-12 md:py-24 lg:py-32 md:px-8 lg:px-16 bg-white overflow-hidden"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.3 }}
@@ -61,7 +61,7 @@ export default function FeatureSection() {
         {/* Left Content */}
         <div className="flex flex-col space-y-6 text-center lg:text-left">
            <motion.div
-            className="inline-flex items-center justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-4 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
+            className="inline-flex items-center text-xs justify-center lg:justify-start bg-[#296253]/10 text-[#296253] md:text-sm font-medium px-4 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
             DigiPaga Conversions
@@ -71,7 +71,7 @@ export default function FeatureSection() {
             <span className="text-lime-500">Instant convert 15 FIAT</span> currencies to crypto & viceversa at the
             lowest fees
           </motion.h2>
-          <motion.p className="max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-gray-600 will-change-transform" variants={itemVariants}>
+          <motion.p className="max-w-xl mx-auto lg:mx-0 text-[16px] md:text-xl text-gray-600 will-change-transform" variants={itemVariants}>
             Digi Mercados is your all-in-one super wallet designed for seamless navigation of the digital markets.
           </motion.p>
           <motion.div className="mt-8 flex flex-col items-center lg:items-start will-change-transform" variants={itemVariants}>
@@ -80,23 +80,23 @@ export default function FeatureSection() {
               <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
             </Button>
             
-            <AnimatedImage src="/arrowL.svg" className="top-24 left-24 " />
+            <AnimatedImage src="/arrowL.svg" className="md:top-24 md:left-24 " />
           </motion.div>
         </div>
 
         {/* Right Image and Background Elements */}
         <motion.div
-          className="relative flex justify-center w-full lg:justify-end items-center h-[400px] md:h-[500px] lg:h-[600px] mt-12 lg:mt-0 will-change-transform"
+          className="relative flex justify-center w-full lg:justify-end items-center h-[300px] md:h-[500px] lg:h-[600px] mt-12 lg:mt-0 will-change-transform"
           variants={imageContainerVariants}
           style={{ y: imageY, scale: imageScale }}
         >
           <AnimatedRotatingImage
                  src="/flower.svg"
-                 className="right-0 top-0 md:right-0-16 h-16"
+                 className="right-0 top-0 md:-right-6 md:h-16"
                />
 
           {/* Image of person with phone */}
-          <div className="relative z-10  p-4">
+          <div className="relative z-10  md:p-4">
             <Image
               src="/img1.png"
               width={400}

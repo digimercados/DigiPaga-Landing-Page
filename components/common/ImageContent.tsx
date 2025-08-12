@@ -83,7 +83,7 @@ export const ImageContent: React.FC<ImageContentProps> = ({
         }`} // ✅ Conditionally add background
       >
         <motion.div
-          className="inline-flex  justify-center lg:justify-start bg-lime-500/20 text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+          className="inline-flex  justify-center lg:justify-start bg-[#296253]/10 text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
           variants={itemVariants}
         >
           {badgeText}

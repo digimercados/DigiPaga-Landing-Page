@@ -6,6 +6,8 @@ import AppIconCard from "./app-icon-card"
 import Image from "next/image"
 import AnimatedImage from "./common/AnimatedArrow"
 import Container from "@/app/Container"
+import AnimatedGlobe from "./common/AnimatedGlobe"
+import AnimatedMap from "./common/AnimatedGlobe"
 
 const appIcons = [
   { name: "Telegram", src: "/tel.png" },
@@ -67,7 +69,9 @@ export default function GlobalReachSection() {
 
       {/* Dotted World Map */} 
        <motion.div className="w-full max-w-5xl mx-auto mt-8 mb-16 z-10 will-change-transform" variants={itemVariants}>
-        <DottedWorldMap />
+        {/* <DottedWorldMap /> */}
+        {/* <AnimatedGlobe/>/ */}
+        <AnimatedMap/>
       </motion.div>
 
       {/* Instant Crypto Section */}

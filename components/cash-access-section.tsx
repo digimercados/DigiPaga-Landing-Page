@@ -24,7 +24,7 @@ export default function CashAccessSection() {
   }
 
   return (
-    <Container>
+    // <Container>
       <section className="relative w-full bg-[#296253] py-12 md:py-24 lg:py-24 px-4 md:px-8 lg:px-16 flex flex-col items-center overflow-hidden" aria-labelledby="cash-access-heading">
       <motion.div
         className="container mx-auto text-white  p-8 md:p-12 shadow-xl flex flex-col md:flex-col items-center justify-between text-center md:text-left will-change-transform"
@@ -57,6 +57,6 @@ export default function CashAccessSection() {
       </motion.div>
                                     <AnimatedImage src="/arrowL.svg" className="bottom-0 left-[50%] " />
     </section>
-    </Container>
+    // </Container>
   )
 }
