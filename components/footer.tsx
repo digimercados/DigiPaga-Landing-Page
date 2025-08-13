@@ -129,7 +129,7 @@ export default function Footer() {
       </div>
 <div className=" inset-0 flex items-center    justify-center py-6 pointer-events-none z-0">
         <motion.span
-          className="text-[#F3F3F5] text-center font-bold text-[7rem] md:text-9xl lg:text-[15rem] select-none will-change-transform"
+          className="text-[#F3F3F5] text-center w-full font-bold text-[4rem] md:text-9xl lg:text-[15rem] select-none will-change-transform"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.9 }}
           viewport={{ once: true, amount: 0.5 }}
