@@ -23,7 +23,7 @@ export default function FooterEmailSignup() {
           aria-label="Email address for newsletter signup"
         />
       </div>
-      <Button className="bg-green-700 w-full hover:bg-green-800 text-white rounded-full px-4 py-2 flex-shrink-0" aria-label="Sign up for newsletter">
+      <Button className="bg-green-700 w-full bg-[#296253] group hover:bg-[#19433a] text-[#F8F9F4] rounded-full px-4 py-2 flex-shrink-0" aria-label="Sign up for newsletter">
         Sign Up
       </Button>
     </motion.div>

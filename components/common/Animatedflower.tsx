@@ -32,7 +32,7 @@ export default function AnimatedRotatingImage({ src, className = "" }) {
   }, []);
 
   return (
-    <div ref={parentRef} className="absolute w-full h-full">
+    <div ref={parentRef} className="absolute z-40 w-full h-full">
       <div ref={wrapperRef} className={`absolute pointer-events-none ${className}`}>
         <Image
           src={src}

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import AnimatedRotatingImage from "./common/Animatedflower"
 import Container from "@/app/Container"
+import AnimatedButton from "./common/ArrowButton"
 
 export default function PaymentControlSection2() {
   const containerVariants = {
@@ -58,7 +59,7 @@ export default function PaymentControlSection2() {
         
        <div className="flex flex-col  px-2 py-6 bg-[#F8F9F4] rounded-lg md:px-8 md:py-16 space-y-6 text-center lg:text-left">
           <motion.div
-            className="inline-flex items-center justify-center lg:justify-start bg-[#B7DF30]  text-white text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+            className="inline-flex items-center justify-center  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
         DigiPaga Invoice Managment         
@@ -72,11 +73,12 @@ export default function PaymentControlSection2() {
             Issue invoices, request payment, control your invoices, payrolls and recurring expenses with the help of AI.
           </motion.p> 
 
-          <motion.div className="mt-8 will-change-transform" variants={itemVariants}> 
-            <Button className="bg-green-700 hover:bg-green-800 text-white rounded-full px-6 py-2" aria-label="Learn more about utility bill payments">
-              Read more
-            </Button>
-          </motion.div>
+          <AnimatedButton
+        text="Read more"
+        link="https://example.com"
+
+        ariaLabel="Read more about currency conversion"
+      />
         </div>
 
         {/* Right Content Column */}
@@ -101,7 +103,7 @@ export default function PaymentControlSection2() {
               width={400}
               height={400}
               alt="Woman using mobile app on couch"
-              className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[350px] md:max-w-[300px] lg:max-w-[400px]"
+              className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[350px] md:max-w-[400px] lg:max-w-[400px]"
             />
             
           

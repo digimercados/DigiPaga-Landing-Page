@@ -27,7 +27,7 @@ export default function CashAccessSection() {
     // <Container>
       <section className="relative w-full bg-[#296253] py-12 md:py-24 lg:py-24 px-4 md:px-8 lg:px-16 flex flex-col items-center overflow-hidden" aria-labelledby="cash-access-heading">
       <motion.div
-        className="container mx-auto text-white  p-8 md:p-12 shadow-xl flex flex-col md:flex-col items-center justify-between text-center md:text-left will-change-transform"
+        className="container mx-auto text-[#F8F9F4]  p-8 md:p-12 shadow-xl flex flex-col md:flex-col items-center justify-between text-center md:text-left will-change-transform"
         // Custom shape using clip-path for a more complex rounded look
         style={{
           clipPath: 'polygon(0% 15%, 15% 0%, 85% 0%, 100% 15%, 100% 85%, 85% 100%, 15% 100%, 0% 85%)',

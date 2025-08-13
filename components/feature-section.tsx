@@ -8,6 +8,7 @@ import { ArrowRight } from "lucide-react"
 import AnimatedImage from "./common/AnimatedArrow"
 import AnimatedRotatingImage from "./common/Animatedflower"
 import Container from "@/app/Container"
+import AnimatedButton from "./common/ArrowButton"
 
 export default function FeatureSection() {
   const ref = useRef(null)
@@ -50,15 +51,19 @@ export default function FeatureSection() {
 
   return (
     <Container>
+    
       <motion.section
         ref={ref}
-        className="relative svg w-full py-12 md:py-24 lg:py-32 md:px-8 lg:px-16 bg-white overflow-hidden"
+        className="relative svg w-full py-12  md:py-24 lg:py-32 md:px-8 lg:px-16 bg-white overflow-hidden"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.3 }}
         variants={containerVariants}
         aria-labelledby="feature-heading"
       >
+        
+        
+        
         <div className="container mx-auto grid lg:grid-cols-2 gap-2 items-center">
           {/* Left Content */}
           <motion.div
@@ -66,7 +71,7 @@ export default function FeatureSection() {
             variants={itemVariants}
           >
             <motion.div
-              className="inline-flex items-center text-xs justify-center lg:justify-start bg-[#B7DF30] text-white md:text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+              className="inline-flex items-center text-xs justify-center   border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] md:text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
               variants={itemVariants}
             >
               DigiPaga Conversions
@@ -89,7 +94,7 @@ export default function FeatureSection() {
               Digi Mercados is your all-in-one super wallet designed for seamless navigation of the digital markets.
             </motion.p>
 
-            <motion.div
+            {/* <motion.div
               className="mt-8 flex flex-col items-center lg:items-start will-change-transform"
               variants={itemVariants}
             >
@@ -101,28 +106,31 @@ export default function FeatureSection() {
                 <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
               </Button>
 
-              <AnimatedImage src="/arrowL.svg" className="md:top-24 md:left-24" />
-            </motion.div>
+              <AnimatedImage src="/arrowL.svg" className="md:top-2 md:left-24" />
+            </motion.div> */}
+             <AnimatedButton
+        text="Read more"
+        link="https://example.com"
+              ariaLabel="Read more about currency conversion"
+      />
           </motion.div>
 
           {/* Right Image and Background Elements */}
           <motion.div
-            className="relative overflow-hidden flex justify-center w-full lg:justify-end items-center mt-12 lg:mt-0 will-change-transform"
+            className="relative  flex justify-center w-full lg:justify-end items-center mt-12 lg:mt-0 will-change-transform"
             variants={imageContainerVariants}
             style={{ y: imageY, scale: imageScale }}
           >
-            <AnimatedRotatingImage
-              src="/flower.svg"
-              className="right-0 top-0 md:right-0 md:h-12"
-            />
+            
 
             <div className="relative z-10 md:p-4">
+                
               <Image
                 src="/img1.png"
                 width={400}
                 height={500}
                 alt="Woman using mobile app"
-                className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[350px] md:max-w-[300px] lg:max-w-[400px]"
+                className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[350px] md:max-w-[400px] lg:max-w-[400px]"
               />
             </div>
           </motion.div>

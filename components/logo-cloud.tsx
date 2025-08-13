@@ -48,7 +48,7 @@ export default function LogoCloud() {
               rel="noopener noreferrer"
               className="will-change-transform"
               whileHover={{
-                scale: 1.4,
+                scale: 1.3,
                 // rotate: [0, 10, -10, 10, 0],
                 transition: { duration: 0.8, ease: "easeInOut" },
                 filter: "grayscale(0%)",

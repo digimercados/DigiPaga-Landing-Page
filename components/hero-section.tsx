@@ -72,7 +72,7 @@ export default function HeroSection() {
           {/* Left Content */}
           <div className="flex flex-col space-y-6 text-center lg:text-left">
             <motion.div
-              className="inline-flex items-center justify-center lg:justify-start bg-[#B7DF30] text-white text-xs font-medium px-2 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
+              className="inline-flex items-center justify-center border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-xs font-medium px-2 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
               variants={itemVariants}
             >
               Access your Dashboard
@@ -80,13 +80,13 @@ export default function HeroSection() {
             </motion.div>
 
             <motion.h1
-              className="text-3xl flex-col flex md:text-5xl lg:text-[50px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform"
+              className="text-3xl flex-col flex md:text-5xl lg:text-[40px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform"
               variants={itemVariants}
             >
               <span>
-                Control <span className="text-[#B7DF30]"><SimpleTyping texts={phrases} /></span>
+                Control <br /> <span className="text-[#B7DF30]"><SimpleTyping texts={phrases} /></span>
               </span>{" "}
-              using Stablecoins on <br />
+              using Stablecoins on 
               <span className="text-[#B7DF30]"> Celo Network</span>
             </motion.h1>
 

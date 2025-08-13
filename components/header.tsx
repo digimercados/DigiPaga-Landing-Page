@@ -31,7 +31,7 @@ export default function Header() {
   return (
     // <Container>
       <motion.nav
-      className="relative z-50 w-full px-4 py-4 md:px-2 lg:px-4 flex items-center justify-between will-change-transform"
+      className="relative z-50 max-w-[1280px] mx-auto w-full px-4 py-4 md:px-2 lg:px-4 flex items-center justify-between will-change-transform"
       initial="hidden"
       animate="visible"
       variants={headerVariants}
@@ -69,7 +69,7 @@ export default function Header() {
           <motion.div key={item.text} variants={navItemVariants} initial="hidden" animate="visible" custom={index}>
             <Link
               href="#"
-              className={buttonVariants({ variant: "outline", size: "sm" }) + " rounded-full px-4 py-2"}
+              className={buttonVariants({ variant: "outline", size: "sm" }) + " hover:bg-[#296253] group hover:text-[#F8F9F4] rounded-full px-4 py-2"}
               aria-label={item.text}
             > 
             {item.text}
@@ -83,7 +83,7 @@ export default function Header() {
       {/* Connect Wallet & Globe (Desktop) */}
       <div className="hidden md:flex items-center space-x-4">
         <motion.div variants={navItemVariants} initial="hidden" animate="visible" custom={navItems.length}>
-          <Button className="bg-green-700 hover:bg-green-800 text-white rounded-lg px-4 py-2 flex items-center" aria-label="Connect Wallet">
+          <Button className="bg-[#296253] group hover:bg-[#19433a] text-[#F8F9F4] rounded-lg px-4 py-2 flex items-center" aria-label="Connect Wallet">
             <Wallet className="h-4 w-4 mr-2" />
             Connect Wallet
           </Button>
@@ -107,7 +107,7 @@ export default function Header() {
               <Link
                 key={item.text}
                 href="#"
-                className={buttonVariants({ variant: "outline", size: "lg" }) + " w-11/12 rounded-full"}
+                className={buttonVariants({ variant: "outline", size: "lg" }) + "  w-11/12 rounded-full"}
                 onClick={() => setIsMobileMenuOpen(false)}
                 aria-label={item.text}
               >
@@ -116,7 +116,7 @@ export default function Header() {
               </Link>
             ))}
             <Button
-              className="bg-green-700 hover:bg-green-800 text-white rounded-xl px-6 py-3 flex items-center w-11/12"
+              className=" bg-[#296253] group hover:bg-[#19433a] text-[#F8F9F4] rounded-xl px-6 py-3 flex items-center w-11/12"
               onClick={() => setIsMobileMenuOpen(false)}
               aria-label="Connect Wallet"
             >

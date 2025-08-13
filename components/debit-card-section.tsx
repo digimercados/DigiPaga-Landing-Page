@@ -7,6 +7,7 @@ import Image from "next/image"
 import AnimatedImage from "./common/AnimatedArrow"
 import AnimatedRotatingImage from "./common/Animatedflower"
 import Container from "@/app/Container"
+import AnimatedButton from "./common/ArrowButton"
 
 export default function DebitCardSection() {
   const containerVariants = {
@@ -94,7 +95,7 @@ export default function DebitCardSection() {
         {/* Right Side */}
         <div className="flex flex-col gap-4  justify-start md:space-y-6 text-center lg:text-left">
           <motion.div
-            className="inline-flex items-center justify-center lg:justify-start bg-[#B7DF30]  text-white text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+            className="inline-flex items-center justify-center  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
             Payment Card
@@ -119,15 +120,11 @@ export default function DebitCardSection() {
             ))}
           </ul>
 
-          <motion.div className="mt-8 w-full flex justify-center md:justify-start will-change-transform" variants={itemVariants}>
-            <Button className="bg-green-700 group hover:bg-green-800 text-white rounded-full px-6 py-2 flex items-center self-center lg:self-start" aria-label="Learn more about the debit card">
-              Learn more
-             
-                            <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
-
-            </Button>
-            <AnimatedImage src="/arrowL.svg" className="top-24 left-24 " />
-          </motion.div>
+          <AnimatedButton
+        text="Learn more"
+        link="https://example.com"
+        ariaLabel="Read more about currency conversion"
+      />
         </div>
         
       </div>

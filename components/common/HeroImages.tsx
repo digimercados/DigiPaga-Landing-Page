@@ -1,14 +1,16 @@
+"use client";
+
 import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 
 export default function FullPageMouseFollow() {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Use motion values for mouse position (normalized 0 to 1)
+  // Motion values for mouse position (0 to 1 normalized)
   const mouseX = useMotionValue(0.5);
   const mouseY = useMotionValue(0.5);
 
-  // Track window mouse movement globally, update mouseX/Y normalized relative to window
+  // Update mouse values on global mouse move
   useEffect(() => {
     function onMouseMove(event: MouseEvent) {
       mouseX.set(event.clientX / window.innerWidth);
@@ -18,7 +20,7 @@ export default function FullPageMouseFollow() {
     return () => window.removeEventListener("mousemove", onMouseMove);
   }, [mouseX, mouseY]);
 
-  // Smooth scale effect on scroll for front image container
+  // Motion value for scroll-based scaling
   const scrollY = useMotionValue(0);
   useEffect(() => {
     function onScroll() {
@@ -30,7 +32,7 @@ export default function FullPageMouseFollow() {
 
   const scale = useTransform(scrollY, [0, 500], [1, 1.05]);
 
-  // Parallax settings for each path (adjust intensities)
+  // Parallax settings for SVG paths
   const parallaxSettings = [
     { xMult: 30, yMult: 20, rotateMult: 6 },
     { xMult: -20, yMult: 25, rotateMult: -4 },
@@ -42,11 +44,17 @@ export default function FullPageMouseFollow() {
     { xMult: -22, yMult: 18, rotateMult: -6 },
   ];
 
+  // Create motion transforms for each path
   const pathMotions = parallaxSettings.map(({ xMult, yMult, rotateMult }) => ({
     x: useTransform(mouseX, [0, 1], [-xMult, xMult]),
     y: useTransform(mouseY, [0, 1], [-yMult, yMult]),
     rotate: useTransform(mouseX, [0, 1], [-rotateMult, rotateMult]),
   }));
+
+  // Front image parallax (subtle)
+  const imgX = useTransform(mouseX, [0, 1], [-20, 20]);
+  const imgY = useTransform(mouseY, [0, 1], [-15, 15]);
+  const imgRotate = useTransform(mouseX, [0, 1], [-5, 5]);
 
   return (
     <section
@@ -54,14 +62,13 @@ export default function FullPageMouseFollow() {
       className="relative w-full min-h-screen overflow-hidden bg-white flex items-center justify-center"
       style={{ perspective: 600 }}
     >
-      {/* SVG Background - absolute full size */}
+      {/* Background SVG */}
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 800 600"
-        className="absolute inset-0 w-full h-full top-0 right-0  select-none pointer-events-none"
+        className="absolute inset-0 w-full h-full top-0 right-0 select-none pointer-events-none"
         preserveAspectRatio="xMidYMid meet"
       >
-        {/* Using your provided paths, each with separate motion */}
         <motion.path
           d="M483.842 309.696C560.461 264.575 612.027 210.09 599.018 187.999C586.009 165.908 513.351 184.577 436.732 229.698C360.112 274.818 308.546 329.304 321.555 351.394C334.564 373.485 407.222 354.816 483.842 309.696Z"
           fill="#0D1004"
@@ -151,12 +158,12 @@ export default function FullPageMouseFollow() {
         />
       </motion.svg>
 
-      {/* Front Image - phone */}
+      {/* Front Image with parallax and scale */}
       <motion.img
         src="/h.png"
         alt="Mobile App Interface"
         className="relative z-10 max-w-[450px] w-4/5 sm:w-1/2 md:w-full object-contain select-none"
-        style={{ scale }}
+        style={{ scale, x: imgX, y: imgY, rotate: imgRotate, transformOrigin: "50% 50%" }}
         draggable={false}
         loading="eager"
       />

@@ -1,9 +1,11 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import AnimatedRotatingImage from "./Animatedflower";
 import AnimatedImage from "./AnimatedArrow";
+import { ArrowRight } from "lucide-react";
 
 interface ImageContentProps {
   badgeText?: string;
@@ -68,7 +70,7 @@ export const ImageContent: React.FC<ImageContentProps> = ({
             width={400}
             height={500}
             alt={imageAlt}
-            className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[350px] md:max-w-[300px] lg:max-w-[400px]"
+            className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[350px] md:max-w-[400px] lg:max-w-[400px]"
           />
         </div>
         
@@ -84,7 +86,7 @@ export const ImageContent: React.FC<ImageContentProps> = ({
         }`} // ✅ Conditionally add background
       >
         <motion.div
-          className="inline-flex  justify-center lg:justify-start bg-[#B7DF30]  text-white text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+          className="inline-flex  justify-center  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
           variants={itemVariants}
         >
           {badgeText}
@@ -105,23 +107,25 @@ export const ImageContent: React.FC<ImageContentProps> = ({
         </motion.p>
 
         {buttonText && (
-          <motion.div
-            className="mt-8 will-change-transform"
-            variants={itemVariants}
-          >
-            <Button
-              asChild
-              className="bg-green-700 hover:bg-green-800 text-white rounded-full px-6 py-2"
-            >
-              <a href={buttonLink} aria-label={buttonText}>
-                {buttonText}
-                
-              </a>
-              
-            </Button>
+         <motion.div
+      className={`mt-8 flex flex-col items-center lg:items-start will-change-transform `}
+      variants={itemVariants}
+    >
+      <a
+        href={buttonLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="bg-[#296253] group hover:bg-[#19433a] text-[#F8F9F4] rounded-full px-6 py-2 inline-flex items-center transition-colors"
+        // aria-label={ariaLabel || text}
+      >
+        <span>{buttonText}</span>
+        <ArrowRight className="ml-2 group-hover:-rotate-45 transition-all duration-200 h-4 w-4" />
+      </a>
 
-            
-          </motion.div>
+    
+    </motion.div>
+
+          
         )}
       </motion.div>
     </div>
