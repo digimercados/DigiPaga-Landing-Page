@@ -15,9 +15,9 @@ export default function Footer() {
   }
 
   const linkItemVariants = {
-    hidden: { opacity: 0, y: 10 },
+    hidden: { opacity: 0, y: -10 },
     visible: { opacity: 1, y: 0 },
-    hover: { x: 5, color: "#84CC16" }, // Lime-500 for hover
+    hover: { y: -5, color: "#84CC16" }, // Lime-500 for hover
   }
 
   const socialIcons = [
@@ -41,15 +41,32 @@ export default function Footer() {
       {/* Background Watermark */}
       
 
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-6 lg:gap-8 z-10 relative">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-6 lg:gap-4 z-10 relative">
         {/* Column 1: Logo, Email Signup, Copyright */}
         
+<div className="flex flex-col items-center md:items-start text-center md:text-left col-span-1 lg:col-span-1">
+          <Link href="#" className="flex items-center space-x-2 mb-6" aria-label="DigiMercados Home">
+            <Image
+                          src="/fl.svg"
+                          width={140}
+                          height={150}
+                          alt="logo"
+                          className="object-cover w-full h-full max-w-[200px] md:max-w-[100px] lg:max-w-[200px]"
+                        />
+            
+          </Link>
+          <FooterEmailSignup />
 
+          
+          <p className=" font-medium text-black mt-6 pl-4">©2025</p>
+          
+          
+        </div>
         {/* Column 2: Exchange */}
-        <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h4 className="font-bold text-gray-900 mb-4">Exchange</h4>
+         <div className="flex flex-col items-center md:items-start text-center md:text-left">
+          <h4 className="font-medium text-gray-900 mb-4">Products</h4>
           <ul className="space-y-2" role="list">
-            {["Talk to an Expert", "Security", "Custom Chainlinks", "Press Inquiries", "Legal"].map((item, index) => (
+            {["Utility Bills", "Crypto Conversions", "Invoice Management", "PayCode", "Business Account"].map((item, index) => (
               <motion.li key={item} variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
                 <Link href="#" className="text-gray-700 hover:text-lime-500 transition-colors duration-200">
                   {item}
@@ -61,28 +78,31 @@ export default function Footer() {
 
         {/* Column 3: Contact */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h4 className="font-bold text-gray-900 mb-4">Contact</h4>
+          <h4 className="font-medium text-gray-900 mb-4">Company</h4>
           <ul className="space-y-2" role="list">
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700">Herengracht 2134</span>
+              <span className="text-gray-700">Our Vision</span>
             </motion.li>
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700">Amsterdam</span>
+              <span className="text-gray-700">Retail Solution</span>
             </motion.li>
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700">The Netherlands</span>
+              <span className="text-gray-700">Partnerships</span>
             </motion.li>
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700">000 000 0000</span>
+              <span className="text-gray-700">Virtual Debit Card</span>
+            </motion.li>
+            <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
+              <span className="text-gray-700">Careers</span>
             </motion.li>
           </ul>
         </div>
 
         {/* Column 4: Newsletter */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
-          <h4 className="font-bold text-gray-900 mb-4">Newsletter</h4>
+          <h4 className="font-medium text-gray-900 mb-4">For Businesses</h4>
           <ul className="space-y-2" role="list">
-            {["Whitepaper", "Case Studies", "Tech Talks", "Economics 2.0", "What is DeFi?"].map((item, index) => (
+            {["Case Studies", "PoS", "Check out", "E-Commerce","Secure Transactions"].map((item, index) => (
               <motion.li key={item} variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
                 <Link href="#" className="text-gray-700 hover:text-lime-500 transition-colors duration-200">
                   {item}
@@ -96,44 +116,20 @@ export default function Footer() {
           <h4 className="font-bold text-gray-900 mb-4">Follow Us</h4>
           
           {/* Policy links directly under social icons */}
-          <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform mt-2" role="listitem"> {/* Added mt-2 for spacing */}
-            <Link href="#" className="text-gray-700 hover:text-lime-500 transition-colors duration-200">
-              Privacy Policy
-            </Link>
-          </motion.li>
-          <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-            <Link href="#" className="text-gray-700 hover:text-lime-500 transition-colors duration-200">
-              Terms & Condition
-            </Link>
-          </motion.li>
-          <p className="mt-6 text-sm text-gray-500">© 2025 Reserved</p>
-        </div>
-
-        <div className="flex flex-col items-center md:items-start text-center md:text-left col-span-1 lg:col-span-1">
-          <Link href="#" className="flex items-center space-x-2 mb-6" aria-label="DigiMercados Home">
-            <Image
-                          src="/logo.png"
-                          width={40}
-                          height={50}
-                          alt="logo"
-                          className="object-cover rounded-[1.5rem] w-full h-full max-w-[200px] md:max-w-[100px] lg:max-w-[150px]"
-                        />
-            
-          </Link>
-          <FooterEmailSignup />
           <div className="flex  w-full items-center   justify-center py-4 space-x-1 mb-6" role="list">
             {socialIcons.map((social, index) => (
               <SocialIcon key={social.name} icon={social.icon} name={social.name} color={social.color} index={index} />
             ))}
             
           </div>
-          
         </div>
+
+        
         
       </div>
-<div className=" inset-0 flex items-start    justify-start pointer-events-none z-0">
+<div className=" inset-0 flex items-center    justify-center py-6 pointer-events-none z-0">
         <motion.span
-          className="text-[#F3F3F5] font-bold text-7xl md:text-9xl lg:text-[15rem] select-none will-change-transform"
+          className="text-[#F3F3F5] text-center font-bold text-[7rem] md:text-9xl lg:text-[15rem] select-none will-change-transform"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.9 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -143,6 +139,31 @@ export default function Footer() {
           DigiPaga
         </motion.span>
       </div>
+
+      <div className=" flex flex-row md:flex  md:flex-col  w-full py-12  items-center  justify-center text-center ">
+          
+          <ul className="  md:flex   gap-y-4  items-center w-full justify-center gap-8" role="list">
+            <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
+              <span className="text-gray-700 mt-12 cursor-pointer">Our Vision</span>
+            </motion.li>
+            <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
+              <span className="text-gray-700 mt-12 cursor-pointer">Retail Solution</span>
+            </motion.li>
+            <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
+              <span className="text-gray-700 mt-12 cursor-pointer">Partnerships</span>
+            </motion.li>
+            <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
+              <span className="text-gray-700 mt-12 cursor-pointer">Virtual Debit Card</span>
+            </motion.li>
+            <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
+              <span className="text-gray-700 mt-12 cursor-pointer">Careers</span>
+            </motion.li>
+          </ul>
+        </div>
+
+    <div className=" w-full text-center font-semibold">
+      <h2>DigiPaga: All rights reserved  z</h2>
+    </div>
  
     </motion.footer>
     // </Container>

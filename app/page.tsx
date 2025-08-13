@@ -18,7 +18,7 @@ export default function Home() {
     <div className="min-h-screen bg-white overflow-hidden">
       <Header />
       <main>
-        {/* <Container> */}
+       
           <HeroSection />
         <LogoCloud />
         <FeatureSection />
@@ -29,7 +29,7 @@ export default function Home() {
         <DebitCardSection />
         <PaymentGateway/>
         <CashAccessSection />
-        {/* </Container> */}
+        
       </main>
       <Footer />
     </div>

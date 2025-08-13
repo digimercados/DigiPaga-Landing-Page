@@ -87,7 +87,7 @@ export default function PaymentGateway() {
             className="inline-flex items-center justify-center  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
-            Payment Card
+           DigiPaga QR System
           </motion.div>
 
           <motion.p className="max-w-xl mx-auto lg:mx-0 text-3xl md:text-5xl text-black will-change-transform" variants={itemVariants}>
