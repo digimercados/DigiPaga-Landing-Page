@@ -63,14 +63,14 @@ export default function HeroSection() {
     <Container>
       <motion.section
         ref={ref}
-        className="relative w-full py-12 md:py-24 lg:py-16 px-4 bg-white overflow-hidden"
+        className="relative w-full py-12 md:py-24 lg:py-16  bg-white overflow-hidden"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
-        <div className="container mx-auto grid lg:grid-cols-2 md:gap-8 items-center">
+        <div className="container mx-auto gap-4 grid lg:grid-cols-2 md:gap-8 items-center">
           {/* Left Content */}
-          <div className="flex flex-col space-y-6 text-center lg:text-left">
+          <div className="flex flex-col gap-4 md:space-y-6 text-center lg:text-left">
             <motion.div
               className="inline-flex items-center justify-center border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-xs font-medium px-2 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
               variants={itemVariants}
@@ -80,12 +80,13 @@ export default function HeroSection() {
             </motion.div>
 
             <motion.h1
-              className="text-3xl flex-col flex md:text-5xl lg:text-[40px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform"
+              className="text-3xl flex-col my-3 flex md:text-5xl lg:text-[40px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform"
               variants={itemVariants}
             >
               <span>
-                Control <br /> <span className="text-[#B7DF30]"><SimpleTyping texts={phrases} /></span>
-              </span>{" "}
+                Control <br /> 
+              </span>
+              <span className="text-[#B7DF30] h-16 md:h-12"><SimpleTyping texts={phrases} /></span>
               using Stablecoins on 
               <span className="text-[#B7DF30]"> Celo Network</span>
             </motion.h1>
@@ -105,20 +106,8 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image and Background Elements */}
-          <div className="relative flex justify-center lg:justify-end items-center h-[400px] md:h-[500px] lg:h-[600px] mt-12 lg:mt-0">
-            {/* Phone Image */}
-            {/* <motion.div
-              className="relative w-full z-50 will-change-transform"
-              variants={phoneVariants}
-              style={{ scale }}
-            >
-              <Image
-                src="/h.png"
-                width={300}
-                height={600}
-                alt="Mobile App Interface showing relative financial dashboard"
-                className="object-contain w-full z-40 h-full max-w-[500px] md:max-w-[688px] lg:max-w-[680px]"
-              />
+          <div className="relative flex justify-center lg:justify-end items-center  md:h-[500px] lg:h-[600px] md:mt-12 lg:mt-0">
+            
 
               {/* Background Image with scroll + hover animation */}
               <motion.div

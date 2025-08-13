@@ -60,7 +60,7 @@ export default function DebitCardSection() {
 
          <AnimatedRotatingImage
                          src="/flower.svg"
-                         className="left-4 top-14 md:left-12 "
+                         className="left-4 top-14   "
                        />
         <motion.div
           className="relative flex justify-center group lg:justify-center items-center h-[400px] md:h-[500px] lg:h-[500px] will-change-transform"
@@ -95,13 +95,13 @@ export default function DebitCardSection() {
         {/* Right Side */}
         <div className="flex flex-col gap-4  z-50 justify-start md:space-y-6 text-center lg:text-left">
           <motion.div
-            className="inline-flex items-center justify-center  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+            className="inline-flex items-center justify-center  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-xs md:text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
             Virtual Debit Card
           </motion.div>
 
-          <motion.p className="max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-gray-600 will-change-transform" variants={itemVariants}>
+          <motion.p className=" mx-auto lg:mx-0 text-md w-full md:text-xl text-gray-600 will-change-transform" variants={itemVariants}>
             Enjoy the flexibility of a Paymint card. Spend anytime, anywhere around the world.
           </motion.p>
 

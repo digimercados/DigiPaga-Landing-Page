@@ -53,8 +53,8 @@ export default function SmoothLogoSlider() {
         }}
       >
         {items.map((item, index) => (
-          <div key={index} className="flex flex-col items-center w-18">
-            <div className="relative w-14 h-14 mb-2">
+          <div key={index} className="flex flex-col items-center w-12 md:w-18">
+            <div className="relative w-14 h-14 mb-2"> 
               <Image
                 src={item.image}
                 alt={item.name}

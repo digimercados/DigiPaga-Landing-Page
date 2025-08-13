@@ -34,7 +34,7 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-[#296253] group hover:bg-[#19433a] text-[#F8F9F4] rounded-full px-6 py-2 inline-flex items-center transition-colors"
+        className="bg-[#296253] group hover:bg-[#19433a] text-xs md:text-sm text-[#F8F9F4] rounded-full px-6 py-2 inline-flex items-center transition-colors"
         aria-label={ariaLabel || text}
       >
         <span>{text}</span>

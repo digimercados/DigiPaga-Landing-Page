@@ -43,13 +43,13 @@ export const ImageContent: React.FC<ImageContentProps> = ({
 }) => {
   return (
     <div
-      className={`container mx-auto grid lg:grid-cols-2 gap-6 items-center mt-12 ${
+      className={`container mx-auto grid lg:grid-cols-2 gap-4 items-center mt-12 ${
         reverseLayout ? "lg:[direction:rtl]" : ""
       }`}
     >
       {/* Left Image Column */}
       <motion.div
-        className="relative flex justify-center lg:justify-start items-center h-[400px] md:h-[500px] lg:h-[600px] will-change-transform"
+        className="relative flex justify-center lg:justify-start items-center  md:h-[500px] lg:h-[600px] will-change-transform"
         initial={{ opacity: 0, x: reverseLayout ? 100 : -100 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.5 }}
@@ -59,18 +59,18 @@ export const ImageContent: React.FC<ImageContentProps> = ({
           <AnimatedRotatingImage
             src={rotatingImageSrc}
             className={
-              rotatingImageClass || "-top-6 left-0 w-16 h-16 md:w-24 md:h-24"
+              rotatingImageClass || "-top-32 left-0 w-16"
             }
           />
         )}
 
-        <div className="relative z-10 p-4">
+        <div className="relative z-10 md:p-4">
           <Image
             src={imageSrc}
             width={400}
             height={500}
             alt={imageAlt}
-            className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[350px] md:max-w-[400px] lg:max-w-[400px]"
+            className="object-cover rounded-[1.5rem] hover:scale-105 duration-300 w-full h-full max-w-[450px] md:max-w-[400px] lg:max-w-[400px]"
           />
         </div>
         
@@ -81,26 +81,26 @@ export const ImageContent: React.FC<ImageContentProps> = ({
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.5 }}
-        className={`flex flex-col px-6 py-2 md:px-8 md:py-12 space-y-6 text-center lg:text-left rounded-lg ${
+        className={`flex flex-col px-2  py-4 md:px-8 md:py-6 space-y-6 text-center lg:text-left rounded-lg ${
           hasBackground ? "bg-[#F8F9F4]" : ""
         }`} // ✅ Conditionally add background
       >
         <motion.div
-          className="inline-flex  justify-center  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+          className="inline-flex  justify-center text-xs  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] md:text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
           variants={itemVariants}
         >
           {badgeText}
         </motion.div>
 
         <motion.h3
-          className="text-3xl md:text-4xl lg:text-[40px] tracking-tight text-gray-900 leading-tight will-change-transform"
+          className="text-2xl md:text-4xl lg:text-[40px] tracking-tight text-gray-900 leading-tight will-change-transform"
           variants={itemVariants}
         >
           {title} <span className="text-[#B7DF30]">{highlightText}</span>
         </motion.h3>
 
         <motion.p
-          className="max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-gray-600 will-change-transform"
+          className="max-w-xl mx-auto lg:mx-0 text-sm md:text-xl text-gray-600 will-change-transform"
           variants={itemVariants}
         >
           {description}
@@ -115,7 +115,7 @@ export const ImageContent: React.FC<ImageContentProps> = ({
         href={buttonLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-[#296253] group hover:bg-[#19433a] text-[#F8F9F4] rounded-full px-6 py-2 inline-flex items-center transition-colors"
+        className="bg-[#296253] text-xs md:text-sm group hover:bg-[#19433a] text-[#F8F9F4] rounded-full px-6 py-2 inline-flex items-center transition-colors"
         // aria-label={ariaLabel || text}
       >
         <span>{buttonText}</span>

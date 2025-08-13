@@ -18,7 +18,7 @@ export default function AppIconCard({ name, src, index }: AppIconCardProps) {
 
   return (
     <motion.div
-      className="flex flex-col items-center justify-center p-2 will-change-transform"
+      className="flex flex-col items-center justify-center md:p-2 will-change-transform"
       variants={itemVariants}
       initial="hidden"
       whileInView="visible"

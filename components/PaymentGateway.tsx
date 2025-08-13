@@ -49,7 +49,7 @@ export default function PaymentGateway() {
 
 
        {/* Heading */}
-      <motion.h2 id="debit-card-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight z-10 text-center will-change-transform" variants={itemVariants}>
+      <motion.h2 id="debit-card-heading" className="text-2xl w-full md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight z-10 text-center will-change-transform" variants={itemVariants}>
      Grow Your Sales With <span className="text-[#B7DF30]">DigiPaga Payment </span>Gateway
       </motion.h2>
      
@@ -66,7 +66,7 @@ export default function PaymentGateway() {
           viewport={{ once: true, amount: 0.5 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          <div className="relative z-10  p-4 ">
+          <div className="relative z-10  md:p-4 ">
             <Image
               src="/pg.png"
               width={400}
@@ -82,15 +82,15 @@ export default function PaymentGateway() {
        
 
         {/* Right Content Column */}
-        <div className="flex flex-col  px-4 md:px-6 py-10  rounded-xl space-y-6 text-center items-center md:items-start lg:text-left">
+        <div className="flex flex-col   md:px-6 py-10  rounded-xl space-y-6 text-center items-center md:items-start lg:text-left">
           <motion.div
-            className="inline-flex items-center justify-center  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
+            className="inline-flex items-center justify-cente text-xs  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] md:text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
            DigiPaga QR System
           </motion.div>
 
-          <motion.p className="max-w-xl mx-auto lg:mx-0 text-3xl md:text-5xl text-black will-change-transform" variants={itemVariants}>
+          <motion.p className="max-w-xl mx-auto lg:mx-0 w-full text-2xl md:text-4xl text-black will-change-transform" variants={itemVariants}>
            DigiPaga PayCode
           </motion.p>
 

@@ -61,6 +61,8 @@ export default function FeatureSection() {
         variants={containerVariants}
         aria-labelledby="feature-heading"
       >
+
+       
         
         
         
@@ -80,7 +82,7 @@ export default function FeatureSection() {
 
             <motion.h2
               id="feature-heading"
-              className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 leading-tight will-change-transform"
+              className="text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 leading-tight will-change-transform"
               variants={itemVariants}
             >
               <span className="text-[#B7DF30]">Instant convert 15 FIAT</span> currencies to crypto & viceversa at the
@@ -88,26 +90,13 @@ export default function FeatureSection() {
             </motion.h2>
 
             <motion.p
-              className="max-w-xl mx-auto lg:mx-0 text-[16px] md:text-xl text-gray-600 will-change-transform"
+              className="max-w-xl mx-auto lg:mx-0 text-[14px] md:text-xl text-gray-600 will-change-transform"
               variants={itemVariants}
             >
               Digi Mercados is your all-in-one super wallet designed for seamless navigation of the digital markets.
             </motion.p>
 
-            {/* <motion.div
-              className="mt-8 flex flex-col items-center lg:items-start will-change-transform"
-              variants={itemVariants}
-            >
-              <Button
-                className="bg-green-700 group hover:bg-green-800 text-white rounded-full px-6 py-2"
-                aria-label="Read more about currency conversion"
-              >
-                Read more
-                <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
-              </Button>
-
-              <AnimatedImage src="/arrowL.svg" className="md:top-2 md:left-24" />
-            </motion.div> */}
+         
              <AnimatedButton
         text="Read more"
         link="https://example.com"
@@ -124,7 +113,10 @@ export default function FeatureSection() {
             
 
             <div className="relative z-10 md:p-4">
-                
+                   <AnimatedRotatingImage
+                          src="/flower.svg"
+                          className="right-0  z-40 md:right-0 -top-20 w-12 h-12 md:w-24 md:h-24"
+                        />
               <Image
                 src="/img1.png"
                 width={400}

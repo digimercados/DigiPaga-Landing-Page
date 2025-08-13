@@ -59,7 +59,7 @@ export default function FullPageMouseFollow() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full min-h-screen overflow-hidden bg-white flex items-center justify-center"
+      className="relative w-full py-16 overflow-hidden bg-white flex items-center justify-center"
       style={{ perspective: 600 }}
     >
       {/* Background SVG */}
@@ -162,7 +162,7 @@ export default function FullPageMouseFollow() {
       <motion.img
         src="/h.png"
         alt="Mobile App Interface"
-        className="relative z-10 max-w-[450px] w-4/5 sm:w-1/2 md:w-full object-contain select-none"
+        className="relative z-10 max-w-[450px]  w-full md:w-[70%] lg:w-full object-contain select-none"
         style={{ scale, x: imgX, y: imgY, rotate: imgRotate, transformOrigin: "50% 50%" }}
         draggable={false}
         loading="eager"

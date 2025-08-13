@@ -31,7 +31,7 @@ export default function Header() {
   return (
     // <Container>
       <motion.nav
-      className="relative z-50 max-w-[1280px] mx-auto w-full px-4 py-4 md:px-2 lg:px-4 flex items-center justify-between will-change-transform"
+      className="relative z-50 max-w-[1200px] mx-auto w-full px-4 py-4 md:px-2 lg:px-4 flex items-center justify-between will-change-transform"
       initial="hidden"
       animate="visible"
       variants={headerVariants}

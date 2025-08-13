@@ -60,7 +60,7 @@ export default function LogoCloud() {
                 alt={logo.name}
                 width={150}
                 height={100}
-                className="h-10 object-contain grayscale w-[80px] md:w-[150px] transition-all duration-300"
+                className="h-10 object-contain grayscale w-[80px] md:w-[100px] transition-all duration-300"
               />
             </motion.a>
           ))}
