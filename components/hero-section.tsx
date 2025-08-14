@@ -80,15 +80,16 @@ export default function HeroSection() {
             </motion.div>
 
             <motion.h1
-              className="text-3xl flex-col my-3 flex md:text-5xl lg:text-[40px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform"
+              className="text-3xl flex-col justify-start text-left   my-3 flex md:text-5xl lg:text-[40px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform text-center"
               variants={itemVariants}
             >
-              <span className=" flex items-center justify-start">
+              <span className=" flex justify-center items-center md:justify-start">
                 Control Your <br /> 
               </span>
-              <span className="text-[#B7DF30] h-16 md:h-12"><SimpleTyping texts={phrases} /></span>
-              using Stablecoins on 
-              <span className="text-[#B7DF30]"> Celo Network</span>
+              <span className="text-[#B7DF30] flex justify-center items-center md:justify-start h-16 md:h-11"><SimpleTyping texts={phrases} />
+              </span>
+              <span className=" w-full flex justify-center items-center md:justify-start h-16 md:h-11">using Stablecoins on</span>
+              <span className="text-[#B7DF30] flex justify-center items-center md:justify-start"> Celo Network</span>
             </motion.h1>
 
             <motion.p
@@ -106,7 +107,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image and Background Elements */}
-          <div className="relative flex justify-center overflow-visible  w-[500px]   z-40  items-center     md:mt-12 lg:mt-0">
+          <div className="relative flex justify-center overflow-visible   w-full  z-40  items-center     md:mt-12 lg:mt-0">
             
             <AnimatedPhone/>
           </div>
