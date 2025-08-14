@@ -47,7 +47,7 @@ export default function Footer() {
 <div className="flex flex-col items-center md:items-start text-center md:text-left col-span-1 lg:col-span-1">
           <Link href="#" className="flex items-center space-x-2 mb-6" aria-label="DigiMercados Home">
             <Image
-                          src="/fl.svg"
+                          src="/logo.png"
                           width={140}
                           height={150}
                           alt="logo"
@@ -147,13 +147,13 @@ export default function Footer() {
               <span className="text-gray-700 mt-12 cursor-pointer">Terms of Use </span>
             </motion.li>
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700 mt-12 cursor-pointer">Privacy Centre  </span>
+              <span className="text-gray-700 mt-12 cursor-pointer">Privacy Policy</span>
             </motion.li>
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
               <span className="text-gray-700 mt-12 cursor-pointer">Cookie Notice  </span>
             </motion.li>
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700 mt-12 cursor-pointer">Customer Terms and Information</span>
+              <span className="text-gray-700 mt-12 cursor-pointer"> Terms and Conditions</span>
             </motion.li>
             
           </ul> 
