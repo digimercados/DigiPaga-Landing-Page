@@ -106,7 +106,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image and Background Elements */}
-          <div className="relative flex justify-center overflow-visible  md:w-[800px]   z-40  items-center     md:mt-12 lg:mt-0">
+          <div className="relative flex justify-center overflow-visible  w-[500px]   z-40  items-center     md:mt-12 lg:mt-0">
             
             <AnimatedPhone/>
           </div>
