@@ -39,7 +39,7 @@ export default function AnimatedRotatingImage({ src, className = "" }) {
           alt=""
           width={100}
           height={100}
-          className="object-contain"
+          className="object-contain w-14 h-14 md:w-20 md:h-20" 
         />
       </div>
     </div>

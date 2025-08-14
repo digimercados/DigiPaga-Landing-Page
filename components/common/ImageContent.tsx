@@ -59,7 +59,7 @@ export const ImageContent: React.FC<ImageContentProps> = ({
           <AnimatedRotatingImage
             src={rotatingImageSrc}
             className={
-              rotatingImageClass || "-top-32 left-0 w-16"
+              rotatingImageClass || ""
             }
           />
         )}

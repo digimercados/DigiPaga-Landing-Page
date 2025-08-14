@@ -144,25 +144,23 @@ export default function Footer() {
           
           <ul className="  md:flex   gap-y-4  items-center w-full justify-center gap-8" role="list">
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700 mt-12 cursor-pointer">Our Vision</span>
+              <span className="text-gray-700 mt-12 cursor-pointer">Terms of Use </span>
             </motion.li>
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700 mt-12 cursor-pointer">Retail Solution</span>
+              <span className="text-gray-700 mt-12 cursor-pointer">Privacy Centre  </span>
             </motion.li>
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700 mt-12 cursor-pointer">Partnerships</span>
+              <span className="text-gray-700 mt-12 cursor-pointer">Cookie Notice  </span>
             </motion.li>
             <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700 mt-12 cursor-pointer">Virtual Debit Card</span>
+              <span className="text-gray-700 mt-12 cursor-pointer">Customer Terms and Information</span>
             </motion.li>
-            <motion.li variants={linkItemVariants} initial="visible" whileHover="hover" transition={{ duration: 0.1 }} className="will-change-transform" role="listitem">
-              <span className="text-gray-700 mt-12 cursor-pointer">Careers</span>
-            </motion.li>
-          </ul>
+            
+          </ul> 
         </div>
 
     <div className=" w-full text-center font-semibold">
-      <h2>DigiPaga: All rights reserved  z</h2>
+      <h2>DigiPaga: All rights reserved  </h2>
     </div>
  
     </motion.footer>

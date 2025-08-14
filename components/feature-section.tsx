@@ -77,12 +77,12 @@ export default function FeatureSection() {
               variants={itemVariants}
             >
               DigiPaga Conversions
-              <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" />
+              {/* <ArrowRight className="ml-2 group-hover:-rotate-45 duration-200 transition-all h-4 w-4" /> */}
             </motion.div>
 
             <motion.h2
               id="feature-heading"
-              className="text-2xl md:text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 leading-tight will-change-transform"
+              className="text-2xl md:text-4xl lg:text-4 xl font-semibold tracking-tight text-gray-900 leading-tight will-change-transform"
               variants={itemVariants}
             >
               <span className="text-[#B7DF30]">Instant convert 15 FIAT</span> currencies to crypto & viceversa at the
@@ -115,7 +115,7 @@ export default function FeatureSection() {
             <div className="relative z-10 md:p-4">
                    <AnimatedRotatingImage
                           src="/flower.svg"
-                          className="right-0  z-40 md:right-0 -top-20 w-12 h-12 md:w-24 md:h-24"
+                          className="right-0  z-40 md:right-0 -top-20 "
                         />
               <Image
                 src="/img1.png"

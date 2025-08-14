@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ChevronLeft } from 'lucide-react'
 import EmailSignup from "@/components/email-signup"
 import { useRef, useState } from "react"
 import Container from "@/app/Container"
@@ -52,25 +52,25 @@ export default function HeroSection() {
   }
 
   const phrases = [
-    "your Finances",
-    "your Crypto Conversions",
-    "your Utility Bills",
-    "your Invoices",
-    "your Remittances",
+    "Finances",
+    "Crypto Conversions",
+    "Utility Bills",
+    "Invoices",
+    "Remittances",
   ]
 
   return (
     <Container>
       <motion.section
         ref={ref}
-        className="relative w-full py-12 md:py-24 lg:py-16  bg-white overflow-hidden"
+        className="relative w-full py-12 md:py-24 lg:py-16  bg-white overflow-visible"
         initial="hidden"
         animate="visible"
         variants={containerVariants}
       >
         <div className="container mx-auto gap-4 grid lg:grid-cols-2 md:gap-8 items-center">
           {/* Left Content */}
-          <div className="flex flex-col gap-4 md:space-y-6 text-center lg:text-left">
+          <div className="flex flex-col gap-4 z-10 md:space-y-6 text-center lg:text-left">
             <motion.div
               className="inline-flex items-center justify-center border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-xs font-medium px-2 py-2 hover:bg-lime-500/90 hover:text-white group hover:cursor-pointer rounded-full self-center lg:self-start will-change-transform"
               variants={itemVariants}
@@ -83,8 +83,8 @@ export default function HeroSection() {
               className="text-3xl flex-col my-3 flex md:text-5xl lg:text-[40px] font-[600] tracking-tight text-gray-900 leading-tight will-change-transform"
               variants={itemVariants}
             >
-              <span>
-                Control <br /> 
+              <span className=" flex items-center justify-start">
+                Control Your <ChevronLeft /> <br /> 
               </span>
               <span className="text-[#B7DF30] h-16 md:h-12"><SimpleTyping texts={phrases} /></span>
               using Stablecoins on 
@@ -106,30 +106,8 @@ export default function HeroSection() {
           </div>
 
           {/* Right Image and Background Elements */}
-          <div className="relative flex justify-center lg:justify-end items-center  md:h-[500px] lg:h-[600px] md:mt-12 lg:mt-0">
+          <div className="relative flex justify-center overflow-visible  md:w-[700px] py-5  h-auto  z-40  items-center     md:mt-12 lg:mt-0">
             
-
-              {/* Background Image with scroll + hover animation */}
-              <motion.div
-                onHoverStart={() => setIsHovered(true)}
-                onHoverEnd={() => setIsHovered(false)}
-                style={{
-                  x: bgXScroll,
-                  y: bgYScroll,
-                  translateX: bgXHover,
-                  translateY: bgYHover,
-                }}
-                className="absolute -z-10 bottom-0 -right-12 w-[600px] cursor-pointer"
-              >
-                <Image
-                  src="/hbg1.png"
-                  width={1000}
-                  height={1000}
-                  alt="Mobile App Interface showing financial dashboard"
-                  className="object-cover"
-                />
-              </motion.div>
-            {/* </motion.div> */} 
             <AnimatedPhone/>
           </div>
         </div>

@@ -63,7 +63,7 @@ export default function DebitCardSection() {
                          className="left-4 top-14   "
                        />
         <motion.div
-          className="relative flex justify-center group lg:justify-center items-center h-[400px] md:h-[500px] lg:h-[500px] will-change-transform"
+          className="relative flex justify-center  z-50 group lg:justify-center items-center h-[400px] md:h-[500px] lg:h-[500px] will-change-transform"
           initial={{ opacity: 0, x: -100 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -72,7 +72,7 @@ export default function DebitCardSection() {
           {/* front Card */}
       
             <Image
-            src="/card.svg"
+            src="/cardf.svg"
             alt="Debit Card Back"
             width={400}
             height={600}

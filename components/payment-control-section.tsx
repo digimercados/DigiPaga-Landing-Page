@@ -44,7 +44,7 @@ export default function PaymentControlSection() {
       {/* Top Heading */}
       <motion.h2 id="payment-control-heading" className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-900 leading-tight z-10 will-change-transform" variants={itemVariants}>
         Control your  <span className="text-[#B7DF30]">Payments  </span>   in multiple currencies
-       <AnimatedImage src="/arrowl.svg" className="top-0 left-[30%]" />
+       <AnimatedImage src="/arrowl.svg" className="top-20  left-[30%]" />
                 <AnimatedImage src="/arrowl.svg" className="top-20  scale-x-[-1]   right-[30%]" />
       </motion.h2>
       <div className="flex space-x-8 mt-2 mb-16 z-10">
@@ -70,7 +70,7 @@ export default function PaymentControlSection() {
   imageSrc="/img3.png"
   imageAlt="Woman using mobile app"
   rotatingImageSrc="/flower.svg"
-  rotatingImageClass="-top-20 left-0 w-16 "
+  rotatingImageClass="left-0 -top-16 z-40 md:left-0 "
   reverseLayout={false}
 />
       {/* </div> */}

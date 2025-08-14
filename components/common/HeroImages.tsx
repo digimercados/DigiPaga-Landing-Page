@@ -59,14 +59,14 @@ export default function FullPageMouseFollow() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full py-16 overflow-hidden bg-white flex items-center justify-center"
+      className=" w-full   py-12 overflow-visible bg-white flex items-center justify-center"
       style={{ perspective: 600 }}
     >
       {/* Background SVG */}
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 800 600"
-        className="absolute inset-0 w-full h-full top-0 right-0 select-none pointer-events-none"
+        viewBox="0 0 800 700"
+        className="absolute inset-0 w-full h-full top-0  overflow-auto right-0 select-none pointer-events-none"
         preserveAspectRatio="xMidYMid meet"
       >
         <motion.path

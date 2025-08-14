@@ -94,7 +94,7 @@ export default function PaymentControlSection2() {
 
            <AnimatedRotatingImage
                   src="/flower.svg"
-                  className="right-0 -top-16 z-40 md:right-0 w-12 h-12 md:w-24 md:h-24"
+                  className="right-0 -top-20 z-40 md:right-0 "
                 />
           
           <div className="relative z-10  md:p-4 ">
