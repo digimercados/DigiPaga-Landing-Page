@@ -84,7 +84,7 @@ export default function HeroSection() {
               variants={itemVariants}
             >
               <span className=" flex items-center justify-start">
-                Control Your <ChevronLeft /> <br /> 
+                Control Your <br /> 
               </span>
               <span className="text-[#B7DF30] h-16 md:h-12"><SimpleTyping texts={phrases} /></span>
               using Stablecoins on 
