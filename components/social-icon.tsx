@@ -9,9 +9,10 @@ interface SocialIconProps {
   name: string
   color: string // Tailwind background color class
   index: number
+  link: string
 }
 
-export default function SocialIcon({ icon: Icon, name, color, index }: SocialIconProps) {
+export default function SocialIcon({ icon: Icon, link, name, color, index }: SocialIconProps) {
   const itemVariants = {
     hidden: { opacity: 0, scale: 0.5 },
     visible: { opacity: 1, scale: 1, transition: { duration: 0.3, delay: index * 0.1, ease: "easeOut" } },
@@ -28,7 +29,7 @@ export default function SocialIcon({ icon: Icon, name, color, index }: SocialIco
       viewport={{ once: true, amount: 0.5 }}
       role="listitem"
     >
-      <Link href="#" aria-label={`Follow us on ${name}`}>
+      <Link href={link} aria-label={`Follow us on ${name}`}>
         <Icon className="h-5 w-5" />
       </Link>
     </motion.div>

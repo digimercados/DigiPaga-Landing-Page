@@ -21,11 +21,11 @@ export default function Footer() {
   }
 
   const socialIcons = [
-    { icon: Facebook, name: "Facebook", color: "bg-green-700" },
-    { icon: Instagram, name: "Instagram", color: "bg-green-700" },
-    { icon: Twitter, name: "Twitter", color: "bg-green-700" },
-    { icon: Linkedin, name: "LinkedIn", color: "bg-green-700" },
-    { icon: Send, name: "Telegram", color: "bg-green-700" },
+    { icon: Facebook,  link:" https://www.facebookcom/digimercados",name: "Facebook", color: "bg-green-700" },
+    { icon: Instagram,  link:"https://www.instagram.com/digipaga ",name: "Instagram", color: "bg-green-700" },
+    { icon: Twitter,  link:" https://www.x.com/digipaga",name: "Twitter", color: "bg-green-700" },
+    { icon: Linkedin,  link:" https://www.linkedin.com/company/digimercados",name: "LinkedIn", color: "bg-green-700" },
+    { icon: Send,  link:"https://t.me/digimercados ",name: "Telegram", color: "bg-green-700" },
   ]
 
   return (
@@ -118,7 +118,7 @@ export default function Footer() {
           {/* Policy links directly under social icons */}
           <div className="flex  w-full items-center   justify-center py-4 space-x-1 mb-6" role="list">
             {socialIcons.map((social, index) => (
-              <SocialIcon key={social.name} icon={social.icon} name={social.name} color={social.color} index={index} />
+              <SocialIcon key={social.name} link={social.link} icon={social.icon} name={social.name} color={social.color} index={index} />
             ))}
             
           </div>
@@ -136,7 +136,7 @@ export default function Footer() {
           transition={{ duration: 1.5, delay: 0.5 }}
           aria-hidden="true"
         >
-          DigiPaga
+          DigiPagav
         </motion.span>
       </div>
 
