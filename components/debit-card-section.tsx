@@ -32,7 +32,7 @@ export default function DebitCardSection() {
 
   const featureItems = [
     "Globally Accepted.",
-    "Track Expenses",
+    "Choose to spend Crypto or Fiat",
     "No Minimum Balance",
   ]
 
@@ -98,7 +98,7 @@ export default function DebitCardSection() {
             className="inline-flex items-center justify-center  border border-[#DFE2D4] lg:justify-start bg-[#EDF0E3] text-[#296253] text-xs md:text-sm font-medium px-4 py-2 rounded-full self-center lg:self-start will-change-transform"
             variants={itemVariants}
           >
-            Virtual Debit Card
+           DigiPaga Virtual Debit Card
           </motion.div>
 
           <motion.p className=" mx-auto lg:mx-0 text-md w-full md:text-xl text-gray-600 will-change-transform" variants={itemVariants}>

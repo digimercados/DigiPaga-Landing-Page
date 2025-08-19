@@ -40,7 +40,7 @@ export default function Footer() {
     >
       {/* Background Watermark */}
       
-
+       
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-6 lg:gap-4 z-10 relative">
         {/* Column 1: Logo, Email Signup, Copyright */}
         
