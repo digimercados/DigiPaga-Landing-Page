@@ -136,7 +136,7 @@ export default function Footer() {
           transition={{ duration: 1.5, delay: 0.5 }}
           aria-hidden="true"
         >
-          DigiPagav
+          DigiPaga
         </motion.span>
       </div>
 
